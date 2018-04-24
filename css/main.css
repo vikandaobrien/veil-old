@@ -6530,6 +6530,27 @@ nav.navbar {
     float: right;
     margin-top: -2px; }
 
+.game {
+  position: relative;
+  text-shadow: 0 0 2px rgba(10, 10, 10, 0.5); }
+  .game .game-bg {
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    position: absolute;
+    transition: all 300ms ease;
+    opacity: 0;
+    width: 100%; }
+  .game:hover .game-bg {
+    opacity: 1; }
+
+.game-left {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.2)), url("../assets/ffxiv.jpg") center/cover; }
+
+.game-right {
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.2)), url("../assets/gw2.jpg") center/cover; }
+  .game-right .title {
+    text-align: right; }
+
 a#return {
   background: rgba(10, 10, 10, 0.7);
   border-radius: .5rem .5rem 0 0;
