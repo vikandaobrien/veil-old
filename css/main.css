@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito:400,400i,700,700i");
 /*! bulma.io v0.7.1 | MIT License | github.com/jgthms/bulma */
 @keyframes spinAround {
   from {
@@ -262,7 +263,7 @@ button,
 input,
 select,
 textarea {
-  font-family: "Helvetica", "Arial", sans-serif; }
+  font-family: "Nunito", sans-serif; }
 
 code,
 pre {
@@ -6418,3 +6419,139 @@ label.panel-block {
 .footer {
   background-color: #fafafa;
   padding: 3rem 1.5rem 6rem; }
+
+.hide {
+  display: none; }
+
+.disable {
+  pointer-events: none; }
+
+.section {
+  background: white; }
+
+.profile {
+  border-radius: 50%;
+  height: 100%;
+  margin-right: .6rem; }
+
+nav.navbar {
+  box-shadow: 0 5px 8px rgba(10, 10, 10, 0.1); }
+  nav.navbar .navbar-link::after {
+    border-width: 1px;
+    border-radius: 0;
+    height: .5rem;
+    width: .5rem; }
+
+#home {
+  background: transparent;
+  text-shadow: 0 0 2px rgba(10, 10, 10, 0.5); }
+  #home .parallax {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4)), url("../assets/background.jpg") center/cover;
+    height: 100vh;
+    position: relative;
+    z-index: -1; }
+  #home .post-parallax {
+    margin-top: -100vh; }
+
+#posts {
+  display: flex;
+  flex-wrap: wrap; }
+  #posts .featured-post {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.2)), url("../assets/1.jpeg") center/cover;
+    height: 400px; }
+    #posts .featured-post .card-content {
+      height: 100%;
+      max-width: 400px; }
+      #posts .featured-post .card-content .title, #posts .featured-post .card-content .subtitle {
+        color: white; }
+  #posts .post p {
+    margin-top: -1rem; }
+  #posts .post img {
+    object-fit: cover; }
+  #posts .third-post {
+    height: 250px; }
+    #posts .third-post.post-img {
+      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../assets/4.jpeg") center/cover; }
+      #posts .third-post.post-img .title {
+        color: white; }
+    #posts .third-post.post-bg {
+      background: linear-gradient(#209cee, #23d160); }
+      #posts .third-post.post-bg .title {
+        color: white; }
+  #posts .half-post {
+    height: 300px; }
+    #posts .half-post.post-img .tags {
+      left: 1.5rem;
+      position: absolute;
+      top: 1.5rem; }
+  #posts .full-post {
+    height: 300px; }
+    #posts .full-post.post-img .columns, #posts .full-post.post-img .column, #posts .full-post.post-img .card-image, #posts .full-post.post-img .image, #posts .full-post.post-img img {
+      height: 100%;
+      margin-bottom: 0;
+      margin-top: 0; }
+    #posts .full-post.post-img .column:first-child {
+      padding-bottom: 0;
+      padding-top: 0; }
+  #posts .author {
+    align-items: center;
+    bottom: 1.5rem;
+    display: flex;
+    height: 30px;
+    position: absolute; }
+
+#post img {
+  object-fit: cover; }
+
+#post .card-content {
+  padding: 2rem 3rem 3rem; }
+
+#post .meta {
+  display: flex;
+  margin-bottom: 2rem;
+  margin-top: -.5rem; }
+  #post .meta .author, #post .meta .date {
+    align-items: center;
+    display: flex;
+    font-size: .75rem;
+    height: 25px;
+    letter-spacing: .5px;
+    margin-right: 1rem;
+    text-transform: uppercase; }
+  #post .meta .icon {
+    font-size: 1rem;
+    margin-right: .3rem;
+    margin-top: -2px; }
+
+#tags {
+  position: sticky;
+  top: 4.75rem; }
+  #tags ul.menu-list li a span {
+    float: right;
+    margin-top: -2px; }
+
+a#return {
+  background: rgba(10, 10, 10, 0.7);
+  border-radius: .5rem .5rem 0 0;
+  bottom: 0;
+  display: none;
+  height: 40px;
+  position: fixed;
+  right: 20px;
+  transition: all 300ms ease;
+  width: 50px;
+  z-index: 30; }
+  a#return span {
+    color: white;
+    margin: 0;
+    position: relative;
+    left: 16px;
+    top: 9px;
+    font-size: 20px;
+    transition: all 300ms ease; }
+  a#return:hover {
+    background: rgba(10, 10, 10, 0.9);
+    height: 45px; }
+
+footer.footer {
+  padding-bottom: 3rem; }

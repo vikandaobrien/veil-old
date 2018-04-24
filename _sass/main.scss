@@ -8,7 +8,7 @@
 
 // 1. Import the initial variables
 @import "../node_modules/bulma/sass/utilities/initial-variables";
-
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,400i,700,700i');
 // 2. Set your own initial variables
 // Update the blue shade, used for links
 $blue: #06bcef;
@@ -16,7 +16,7 @@ $blue: #06bcef;
 $pink: #ff8080;
 $pink-invert: #fff;
 // Update the sans-serif font family
-$family-sans-serif: "Helvetica", "Arial", sans-serif;
+$family-sans-serif: "Nunito", sans-serif;
 
 // 3. Set the derived variables
 // Use the new pink as the primary color
@@ -27,3 +27,4 @@ $primary-invert: $pink-invert;
 
 
 @import "../node_modules/bulma/bulma";
+@import "theme";
