@@ -16,6 +16,24 @@
   margin-right: .6rem;
 }
 
+.info {
+  color: $grey;
+  font-size: .8rem;
+  letter-spacing: .5px;
+  margin-bottom: 1rem;
+  margin-top: -1rem;
+  text-transform: uppercase;
+
+  a {
+    display: inline-block;
+    margin: 0 .3rem;
+  }
+
+  .fa-icon {
+    margin-right: 2px;
+  }
+}
+
 nav.navbar {
   box-shadow: 0 5px 8px rgba($black, 0.1);
 
@@ -203,6 +221,10 @@ nav.navbar {
   }
 }
 
+.game-carousel {
+  height: 400px;
+}
+
 .members {
   justify-content: center;
   display: flex;
@@ -261,24 +283,6 @@ nav.navbar {
       object-fit: cover;
       width: 100%;
     }
-  }
-
-  .info {
-    color: $grey;
-    font-size: .8rem;
-    letter-spacing: .5px;
-    margin-bottom: 1rem;
-    margin-top: -1rem;
-    text-transform: uppercase;
-  }
-
-  a {
-    display: inline-block;
-    margin: 0 .3rem;
-  }
-
-  .fa-icon {
-    margin-right: 2px;
   }
 }
 
@@ -388,3 +392,18 @@ a#return {
 footer.footer {
   padding-bottom: 3rem;
 }
+
+
+/* BULMA CAROUSEL FIX */
+
+.carousel.is-reversing .carousel-container{-webkit-transform:translateX(100%);transform:translateX(100%)}
+.carousel.is-reversing.is-2 .carousel-container{-webkit-transform:translateX(calc(100% / 2));transform:translateX(calc(100% / 2))}
+.carousel.is-reversing.is-3 .carousel-container{-webkit-transform:translateX(calc(100% / 3));transform:translateX(calc(100% / 3))}
+.carousel.is-reversing.is-4 .carousel-container{-webkit-transform:translateX(calc(100% / 4));transform:translateX(calc(100% / 4))}
+.carousel.is-reversing.is-5 .carousel-container{-webkit-transform:translateX(calc(100% / 5));transform:translateX(calc(100% / 5))}
+
+.hero-carousel.is-reversing .carousel-container{-webkit-transform:translateX(100%);transform:translateX(100%)}
+.hero-carousel.is-reversing.is-2 .carousel-container{-webkit-transform:translateX(calc(100% / 2));transform:translateX(calc(100% / 2))}
+.hero-carousel.is-reversing.is-3 .carousel-container{-webkit-transform:translateX(calc(100% / 3));transform:translateX(calc(100% / 3))}
+.hero-carousel.is-reversing.is-4 .carousel-container{-webkit-transform:translateX(calc(100% / 4));transform:translateX(calc(100% / 4))}
+.hero-carousel.is-reversing.is-5 .carousel-container{-webkit-transform:translateX(calc(100% / 5));transform:translateX(calc(100% / 5))}
