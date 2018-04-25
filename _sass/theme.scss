@@ -16,6 +16,23 @@
   margin-right: .6rem;
 }
 
+.meta {
+
+  a {
+    font-size: .75rem;
+    height: 25px;
+    letter-spacing: .5px;
+    margin-right: 1rem;
+    text-transform: uppercase;
+  }
+
+  .fa-icon {
+    font-size: 1rem;
+    margin-right: .3rem;
+    margin-top: -2px;
+  }
+}
+
 .info {
   color: $grey;
   font-size: .8rem;
@@ -161,20 +178,9 @@
     margin-bottom: 2rem;
     margin-top: -.5rem;
 
-    a, span {
+    a {
       align-items: center;
       display: flex;
-      font-size: .75rem;
-      height: 25px;
-      letter-spacing: .5px;
-      margin-right: 1rem;
-      text-transform: uppercase;
-    }
-
-    .fa-icon {
-      font-size: 1rem;
-      margin-right: .3rem;
-      margin-top: -2px;
     }
   }
 }
@@ -187,42 +193,6 @@
     float: right;
     margin-top: -2px;
   }
-}
-
-.game {
-  position: relative;
-  text-shadow: 0 0 2px transparentize($black,.5);
-
-  .game-bg {
-    background-color: rgba(0,0,0, .5);
-    height: 100%;
-    opacity: 0;
-    position: absolute;
-    transition: all 300ms ease;
-    width: 100%;
-  }
-
-  &:hover {
-    .game-bg {
-      opacity: 1;
-    }
-  }
-}
-
-.game-left {
-  background: linear-gradient(to right, rgba(0,0,0, .9), rgba(0,0,0, .2)), url('../assets/ffxiv.jpg') center/cover;
-}
-
-.game-right {
-  background: linear-gradient(to left, rgba(0,0,0, .9), rgba(0,0,0, .2)), url('../assets/gw2.jpg') center/cover;
-
-  .title {
-    text-align: right;
-  }
-}
-
-.game-carousel {
-  height: 400px;
 }
 
 .members {
@@ -271,28 +241,44 @@
   }
 }
 
-#member-info {
+.game {
+  position: relative;
+  text-shadow: 0 0 2px transparentize($black,.5);
 
-  .avatar {
-    padding: 0 1rem;
+  .game-bg {
+    background-color: rgba(0,0,0, .5);
+    height: 100%;
+    opacity: 0;
+    position: absolute;
+    transition: all 300ms ease;
+    width: 100%;
+  }
 
-    img {
-      border: 5px solid $grey-lighter;
-      border-radius: 1rem;
-      height: 100%;
-      object-fit: cover;
-      width: 100%;
+  &:hover {
+    .game-bg {
+      opacity: 1;
     }
   }
 }
 
-#member-games {
+.game-left {
+  background: linear-gradient(to right, rgba(0,0,0, .9), rgba(0,0,0, .2)), url('../assets/ffxiv.jpg') center/cover;
+}
 
-  .columns {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+.game-right {
+  background: linear-gradient(to left, rgba(0,0,0, .9), rgba(0,0,0, .2)), url('../assets/gw2.jpg') center/cover;
+
+  .title {
+    text-align: right;
   }
+}
+
+.game-carousel {
+  height: 400px;
+}
+
+.game-card {
+  position: relative;
 
   .game-overlay {
     background: linear-gradient(rgba(0,0,0, .2), rgba(0,0,0, .8));
@@ -318,10 +304,38 @@
     }
   }
 
+  img {
+    object-fit: cover;
+  }
+
   .title {
     bottom: .75rem;
     left: 1rem;
     position: absolute;
+  }
+}
+
+#member-info {
+
+  .avatar {
+    padding: 0 1rem;
+
+    img {
+      border: 5px solid $grey-lighter;
+      border-radius: 1rem;
+      height: 100%;
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+}
+
+#member-games {
+
+  .columns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .member {
@@ -363,6 +377,78 @@
 
 #signup {
   padding: 1.5rem;
+}
+
+#profile {
+
+  figure {
+    margin: 1rem auto;
+  }
+
+  img {
+    border-radius: 50%;
+  }
+
+  li {
+    line-height: 1.8rem;
+  }
+
+  .fa-icon {
+    color: $grey-light;
+    display: inline-block;
+    margin: 0 5px;
+    text-align: center;
+    width: 20px;
+  }
+
+  .profile-bio {
+    font-size: .85rem;
+    margin-top: .5rem;
+    text-align: justify;
+  }
+}
+
+#profile-info {
+
+  .card {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+  }
+
+  .game-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .game-card {
+      margin: .5rem;
+      width: 200px;
+    }
+
+    img, .game-overlay, .game-hover {
+      border-radius: 1rem;
+    }
+
+    .title {
+      color: $white;
+    }
+
+    .game-add {
+      align-items: center;
+      background: whitesmoke;
+      border-radius: 1rem;
+      color: $grey-lighter;
+      display: flex;
+      font-size: 4rem;
+      justify-content: center;
+      transition: all 300ms ease;
+
+      &:hover {
+        background: $grey-lighter;
+        color: $grey-light;
+      }
+    }
+  }
 }
 
 a#return {

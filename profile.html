@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html class="has-navbar-fixed-top">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Veil | My Profile</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script defer src="lib/main.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+      <div class="container">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="https://bulma.io">
+            <img src="https://bulma.io/images/bulma-logo.png" alt="Bulma: a modern CSS framework based on Flexbox" width="112" height="28">
+          </a>
+
+          <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+        <div class="navbar-menu" id="navMenu">
+          <div class="navbar-start">
+            <a class="navbar-item" href="/">
+              Home
+            </a>
+            <a class="navbar-item" href="/">
+              About
+            </a>
+            <a class="navbar-item" href="/games.html">
+              Games
+            </a>
+            <a class="navbar-item" href="/members.html">
+              Members
+            </a>
+            <a class="navbar-item" href="/">
+              Events
+            </a>
+          </div>
+          <div class="navbar-end">
+            <div class="navbar-item has-dropdown is-hoverable">
+              <a class="navbar-link is-hidden-touch">
+                <img class="profile" src="photo.jpg" alt="Vikanda">
+                Vikanda
+              </a>
+              <div class="navbar-dropdown is-right">
+                <a class="navbar-item">
+                  Profile
+                </a>
+                <a class="navbar-item">
+                  Settings
+                </a>
+                <a class="navbar-item">
+                  Help
+                </a>
+                <hr class="navbar-divider">
+                <a class="navbar-item is-active">
+                  Log Out
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section class="hero is-light is-bold">
+      <div class="hero-body">
+        <div class="container">
+          <div class="columns">
+
+            <div class="column is-4">
+
+              <div id="profile" class="card">
+                <div class="card-content">
+                  <figure class="image is-128x128">
+                    <img src="photo.jpg">
+                  </figure>
+                  <aside class="menu">
+                    <h1 class="title is-4 has-text-centered">Vikanda Gonzales</h1>
+                    <p class="subtitle menu-label has-text-centered">
+                      Leader
+                    </p>
+                    <hr>
+                    <ul class="menu-list">
+                      <li>
+                        <span class="fa-icon">
+                          <i class="fas fa-envelope"></i>
+                        </span>
+                        vikanda.gonzales@yahoo.com
+                      </li>
+                      <li>
+                        <span class="fa-icon">
+                          <i class="fas fa-birthday-cake"></i>
+                        </span>
+                        September 16, 1992
+                      </li>
+                      <li>
+                        <span class="fa-icon">
+                          <i class="fas fa-map-marker-alt"></i>
+                        </span>
+                        Seattle, WA
+                      </li>
+                      <li>
+                        <span class="fa-icon">
+                          <i class="fas fa-clock"></i>
+                        </span>
+                        UTC-8:00
+                      </li>
+                    </ul>
+                    <p class="profile-bio">
+                      Vikanda is the leader, founder, and mastermind of Veil. She is a workaholic and will be caught doing something productive 24/7. She has a fatal allergy for anything that requires jumping. She used to be too insecure about her abilities to participate in difficult battles, but ever since she attended the Kayden School of Healing, she has devoted herself to career raid healing. Don't let her humble demeanor fool you! She's actually quite blunt and will point out mistakes like no tomorrow if she knows you well enough.
+                    </p>
+                  </aside>
+                  <hr>
+                  <button class="button is-primary is-outlined is-fullwidth">Edit Profile</button>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="column is-8">
+              <div id="profile-info" class="columns">
+                <div class="column is-12">
+
+                  <div class="card">
+                    <div class="card-content">
+                      <h1 class="title is-2 has-text-centered">
+                        Games
+                      </h1>
+                      <div class="game-container">
+                        <div class="game-card">
+                          <figure class="image is-4by3">
+                            <img src="./assets/gw2.jpg" alt="Placeholder image">
+                          </figure>
+                          <div class="game-overlay">
+                            <div class="game-hover">
+                            </div>
+                          </div>
+                          <h1 class="title is-6">
+                            Guild Wars 2
+                          </h1>
+                        </div>
+                        <div class="game-card">
+                          <figure class="image is-4by3">
+                            <img src="./assets/ffxiv.jpg" alt="Placeholder image">
+                          </figure>
+                          <div class="game-overlay">
+                            <div class="game-hover">
+                            </div>
+                          </div>
+                          <h1 class="title is-6">
+                            Final Fantasy XIV
+                          </h1>
+                        </div>
+                        <div class="game-card game-add">
+                          <i class="far fa-plus-square"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <div class="card-content">
+                      <h1 class="title is-2 has-text-centered">
+                        Characters
+                      </h1>
+                      <div class="game-container">
+                        <div class="game-card">
+                          <figure class="image is-4by3">
+                            <img src="./assets/members/vikanda.png" alt="Placeholder image">
+                          </figure>
+                          <div class="game-overlay">
+                            <div class="game-hover">
+                            </div>
+                          </div>
+                          <h1 class="title is-6">
+                            Vikanda Glynae
+                          </h1>
+                        </div>
+                        <div class="game-card">
+                          <figure class="image is-4by3">
+                            <img src="./assets/members/vikanda.png" alt="Placeholder image">
+                          </figure>
+                          <div class="game-overlay">
+                            <div class="game-hover">
+                            </div>
+                          </div>
+                          <h1 class="title is-6">
+                            Vikanda
+                          </h1>
+                        </div>
+                        <div class="game-card game-add">
+                          <i class="far fa-plus-square"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <div class="card-content">
+                      <h1 class="title is-2 has-text-centered is-spaced">
+                        Posts
+                      </h1>
+                      <br>
+                      <div class="level">
+                        <div class="level-left">
+                          <p class="subtitle">
+                            Vape heirloom unicorn, slow-carb bicycle
+                          </p>
+                        </div>
+                        <div class="level-right meta">
+                          <a class="level-item">
+                            <span class="fa-icon"><i class="far fa-edit"></i></span>
+                          </a>
+                          <a class="level-item">
+                            <span class="fa-icon"><i class="far fa-trash-alt"></i></span>
+                          </a>
+                        </div>
+                      </div>
+                      <hr>
+                      <div class="level">
+                        <div class="level-left">
+                          <p class="subtitle">
+                            Tattooed sustainable lomo ugh keffiyeh
+                          </p>
+                        </div>
+                        <div class="level-right meta">
+                          <a class="level-item">
+                            <span class="fa-icon"><i class="far fa-edit"></i></span>
+                          </a>
+                          <a class="level-item">
+                            <span class="fa-icon"><i class="far fa-trash-alt"></i></span>
+                          </a>
+                        </div>
+                      </div>
+                      <hr>
+                      <div class="level">
+                        <div class="level-left">
+                          <p class="subtitle">
+                            Tattooed sustainable lomo ugh keffiyeh
+                          </p>
+                        </div>
+                        <div class="level-right meta">
+                          <a class="level-item">
+                            <span class="fa-icon"><i class="far fa-edit"></i></span>
+                          </a>
+                          <a class="level-item">
+                            <span class="fa-icon"><i class="far fa-trash-alt"></i></span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <a id="return">
+      <span>
+        <i class="fas fa-chevron-up"></i>
+      </span>
+    </a>
+
+    <footer class="footer has-text-centered">
+      <div class="container">
+        Copyright © 2018 Vikanda Gonzales
+      </div>
+    </footer>
+
+  </body>
+</html>

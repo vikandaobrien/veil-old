@@ -6434,6 +6434,18 @@ label.panel-block {
   height: 100%;
   margin-right: .6rem; }
 
+.meta a {
+  font-size: .75rem;
+  height: 25px;
+  letter-spacing: .5px;
+  margin-right: 1rem;
+  text-transform: uppercase; }
+
+.meta .fa-icon {
+  font-size: 1rem;
+  margin-right: .3rem;
+  margin-top: -2px; }
+
 .info {
   color: #7a7a7a;
   font-size: .8rem;
@@ -6524,18 +6536,9 @@ label.panel-block {
   display: flex;
   margin-bottom: 2rem;
   margin-top: -.5rem; }
-  #post .meta a, #post .meta span {
+  #post .meta a {
     align-items: center;
-    display: flex;
-    font-size: .75rem;
-    height: 25px;
-    letter-spacing: .5px;
-    margin-right: 1rem;
-    text-transform: uppercase; }
-  #post .meta .fa-icon {
-    font-size: 1rem;
-    margin-right: .3rem;
-    margin-top: -2px; }
+    display: flex; }
 
 #tags {
   position: sticky;
@@ -6543,30 +6546,6 @@ label.panel-block {
   #tags ul.menu-list li a span {
     float: right;
     margin-top: -2px; }
-
-.game {
-  position: relative;
-  text-shadow: 0 0 2px rgba(10, 10, 10, 0.5); }
-  .game .game-bg {
-    background-color: rgba(0, 0, 0, 0.5);
-    height: 100%;
-    opacity: 0;
-    position: absolute;
-    transition: all 300ms ease;
-    width: 100%; }
-  .game:hover .game-bg {
-    opacity: 1; }
-
-.game-left {
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.2)), url("../assets/ffxiv.jpg") center/cover; }
-
-.game-right {
-  background: linear-gradient(to left, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.2)), url("../assets/gw2.jpg") center/cover; }
-  .game-right .title {
-    text-align: right; }
-
-.game-carousel {
-  height: 400px; }
 
 .members {
   justify-content: center;
@@ -6605,6 +6584,57 @@ label.panel-block {
     .members .member:hover .member-label {
       opacity: 1; }
 
+.game {
+  position: relative;
+  text-shadow: 0 0 2px rgba(10, 10, 10, 0.5); }
+  .game .game-bg {
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    opacity: 0;
+    position: absolute;
+    transition: all 300ms ease;
+    width: 100%; }
+  .game:hover .game-bg {
+    opacity: 1; }
+
+.game-left {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.2)), url("../assets/ffxiv.jpg") center/cover; }
+
+.game-right {
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.2)), url("../assets/gw2.jpg") center/cover; }
+  .game-right .title {
+    text-align: right; }
+
+.game-carousel {
+  height: 400px; }
+
+.game-card {
+  position: relative; }
+  .game-card .game-overlay {
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8));
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%; }
+    .game-card .game-overlay .game-hover {
+      background: rgba(0, 0, 0, 0.5);
+      height: 100%;
+      left: 0;
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      transition: all 300ms ease;
+      width: 100%; }
+    .game-card .game-overlay:hover .game-hover {
+      opacity: 1; }
+  .game-card img {
+    object-fit: cover; }
+  .game-card .title {
+    bottom: .75rem;
+    left: 1rem;
+    position: absolute; }
+
 #member-info .avatar {
   padding: 0 1rem; }
   #member-info .avatar img {
@@ -6618,30 +6648,6 @@ label.panel-block {
   display: flex;
   flex-wrap: wrap;
   justify-content: center; }
-
-#member-games .game-overlay {
-  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8));
-  height: 100%;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 100%; }
-  #member-games .game-overlay .game-hover {
-    background: rgba(0, 0, 0, 0.5);
-    height: 100%;
-    left: 0;
-    opacity: 0;
-    position: absolute;
-    top: 0;
-    transition: all 300ms ease;
-    width: 100%; }
-  #member-games .game-overlay:hover .game-hover {
-    opacity: 1; }
-
-#member-games .title {
-  bottom: .75rem;
-  left: 1rem;
-  position: absolute; }
 
 #member-games .member {
   height: 50px;
@@ -6671,6 +6677,55 @@ label.panel-block {
 
 #signup {
   padding: 1.5rem; }
+
+#profile figure {
+  margin: 1rem auto; }
+
+#profile img {
+  border-radius: 50%; }
+
+#profile li {
+  line-height: 1.8rem; }
+
+#profile .fa-icon {
+  color: #b5b5b5;
+  display: inline-block;
+  margin: 0 5px;
+  text-align: center;
+  width: 20px; }
+
+#profile .profile-bio {
+  font-size: .85rem;
+  margin-top: .5rem;
+  text-align: justify; }
+
+#profile-info .card {
+  margin-bottom: 1.5rem;
+  padding: 1rem; }
+
+#profile-info .game-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+  #profile-info .game-container .game-card {
+    margin: .5rem;
+    width: 200px; }
+  #profile-info .game-container img, #profile-info .game-container .game-overlay, #profile-info .game-container .game-hover {
+    border-radius: 1rem; }
+  #profile-info .game-container .title {
+    color: white; }
+  #profile-info .game-container .game-add {
+    align-items: center;
+    background: whitesmoke;
+    border-radius: 1rem;
+    color: #dbdbdb;
+    display: flex;
+    font-size: 4rem;
+    justify-content: center;
+    transition: all 300ms ease; }
+    #profile-info .game-container .game-add:hover {
+      background: #dbdbdb;
+      color: #b5b5b5; }
 
 a#return {
   background: rgba(10, 10, 10, 0.7);
