@@ -432,21 +432,29 @@
     .title {
       color: $white;
     }
+  }
 
-    .game-add {
-      align-items: center;
-      background: whitesmoke;
+  .add {
+    align-items: center;
+    background: whitesmoke;
+    color: $grey-lighter;
+    display: flex;
+    justify-content: center;
+    transition: all 300ms ease;
+
+    &.game-add {
       border-radius: 1rem;
-      color: $grey-lighter;
-      display: flex;
       font-size: 4rem;
-      justify-content: center;
-      transition: all 300ms ease;
+    }
 
-      &:hover {
-        background: $grey-lighter;
-        color: $grey-light;
-      }
+    &.character-add {
+      border-radius: 50%;
+      font-size: 3rem;
+    }
+
+    &:hover {
+      background: $grey-lighter;
+      color: $grey-light;
     }
   }
 }

@@ -6714,18 +6714,23 @@ label.panel-block {
     border-radius: 1rem; }
   #profile-info .game-container .title {
     color: white; }
-  #profile-info .game-container .game-add {
-    align-items: center;
-    background: whitesmoke;
+
+#profile-info .add {
+  align-items: center;
+  background: whitesmoke;
+  color: #dbdbdb;
+  display: flex;
+  justify-content: center;
+  transition: all 300ms ease; }
+  #profile-info .add.game-add {
     border-radius: 1rem;
-    color: #dbdbdb;
-    display: flex;
-    font-size: 4rem;
-    justify-content: center;
-    transition: all 300ms ease; }
-    #profile-info .game-container .game-add:hover {
-      background: #dbdbdb;
-      color: #b5b5b5; }
+    font-size: 4rem; }
+  #profile-info .add.character-add {
+    border-radius: 50%;
+    font-size: 3rem; }
+  #profile-info .add:hover {
+    background: #dbdbdb;
+    color: #b5b5b5; }
 
 a#return {
   background: rgba(10, 10, 10, 0.7);
