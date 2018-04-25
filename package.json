@@ -2,6 +2,7 @@
   "name": "Veil",
   "version": "0.0.1",
   "description": "Website for Veil, a guild and gaming community",
+  "repository": "https://github.com/vikandagonzales/veil",
   "keywords": [
     "html",
     "css",
@@ -11,8 +12,10 @@
     "bulma"
   ],
   "author": "Vikanda Gonzales",
+  "license": "UNLICENSED",
   "dependencies": {
     "bulma": "^0.7.1",
+    "bulma-extensions": "^1.0.14",
     "live-server": "^1.2.0"
   },
   "devDependencies": {
