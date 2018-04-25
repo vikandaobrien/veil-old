@@ -34,15 +34,15 @@
   }
 }
 
-nav.navbar {
-  box-shadow: 0 5px 8px rgba($black, 0.1);
+.navbar-link::after, .select:not(.is-multiple):not(.is-loading)::after {
+  border-width: 1px;
+  border-radius: 0;
+  height: .5rem;
+  width: .5rem;
+}
 
-  .navbar-link::after {
-    border-width: 1px;
-    border-radius: 0;
-    height: .5rem;
-    width: .5rem;
-  }
+.navbar {
+  box-shadow: 0 5px 8px rgba($black, 0.1);
 }
 
 #home {
@@ -161,7 +161,7 @@ nav.navbar {
     margin-bottom: 2rem;
     margin-top: -.5rem;
 
-    .author, .date {
+    a, span {
       align-items: center;
       display: flex;
       font-size: .75rem;
@@ -359,6 +359,10 @@ nav.navbar {
       margin-bottom: 0;
     }
   }
+}
+
+#signup {
+  padding: 1.5rem;
 }
 
 a#return {

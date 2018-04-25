@@ -6447,13 +6447,14 @@ label.panel-block {
   .info .fa-icon {
     margin-right: 2px; }
 
-nav.navbar {
+.navbar-link::after, .select:not(.is-multiple):not(.is-loading)::after {
+  border-width: 1px;
+  border-radius: 0;
+  height: .5rem;
+  width: .5rem; }
+
+.navbar {
   box-shadow: 0 5px 8px rgba(10, 10, 10, 0.1); }
-  nav.navbar .navbar-link::after {
-    border-width: 1px;
-    border-radius: 0;
-    height: .5rem;
-    width: .5rem; }
 
 #home {
   background: transparent;
@@ -6523,7 +6524,7 @@ nav.navbar {
   display: flex;
   margin-bottom: 2rem;
   margin-top: -.5rem; }
-  #post .meta .author, #post .meta .date {
+  #post .meta a, #post .meta span {
     align-items: center;
     display: flex;
     font-size: .75rem;
@@ -6667,6 +6668,9 @@ nav.navbar {
   margin-bottom: 0; }
   #character-info .tags .tag {
     margin-bottom: 0; }
+
+#signup {
+  padding: 1.5rem; }
 
 a#return {
   background: rgba(10, 10, 10, 0.7);

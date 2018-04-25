@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html class="has-navbar-fixed-top">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Veil | Log In</title>
+    <link rel="stylesheet" href="/node_modules/bulma-extensions/bulma-carousel/dist/bulma-carousel.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script defer src="lib/main.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+      <div class="container">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="https://bulma.io">
+            <img src="https://bulma.io/images/bulma-logo.png" alt="Bulma: a modern CSS framework based on Flexbox" width="112" height="28">
+          </a>
+
+          <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+        <div class="navbar-menu" id="navMenu">
+          <div class="navbar-start">
+            <a class="navbar-item" href="/">
+              Home
+            </a>
+            <a class="navbar-item" href="/">
+              About
+            </a>
+            <a class="navbar-item" href="/games.html">
+              Games
+            </a>
+            <a class="navbar-item" href="/members.html">
+              Members
+            </a>
+            <a class="navbar-item" href="/">
+              Events
+            </a>
+          </div>
+          <div class="navbar-end">
+            <div class="navbar-item has-dropdown is-hoverable">
+              <a class="navbar-link is-hidden-touch">
+                <img class="profile" src="photo.jpg" alt="Vikanda">
+                Vikanda
+              </a>
+              <div class="navbar-dropdown is-right">
+                <a class="navbar-item">
+                  Profile
+                </a>
+                <a class="navbar-item">
+                  Settings
+                </a>
+                <a class="navbar-item">
+                  Help
+                </a>
+                <hr class="navbar-divider">
+                <a class="navbar-item is-active">
+                  Log Out
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section class="hero is-medium is-dark is-bold">
+      <div class="hero-body">
+        <div class="container">
+          <div class="columns">
+            <div class="column is-4-desktop is-offset-4-desktop">
+
+              <div class="field">
+                <p class="control has-icons-left">
+                  <input class="input" type="email" placeholder="Email">
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-envelope"></i>
+                  </span>
+                </p>
+              </div>
+              <div class="field">
+                <p class="control has-icons-left">
+                  <input class="input" type="password" placeholder="Password">
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-lock"></i>
+                  </span>
+                </p>
+              </div>
+              <div class="control">
+                <button class="button is-primary is-fullwidth">Log In</button>
+              </div>
+              <p class="help is-danger">Email or password is invalid.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <a id="return">
+      <span>
+        <i class="fas fa-chevron-up"></i>
+      </span>
+    </a>
+
+    <footer class="footer has-text-centered">
+      <div class="container">
+        Copyright © 2018 Vikanda Gonzales
+      </div>
+    </footer>
+
+  </body>
+</html>
