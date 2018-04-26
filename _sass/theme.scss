@@ -459,6 +459,24 @@
   }
 }
 
+#add-post {
+
+  .columns:first-child {
+    margin-bottom: 0;
+  }
+}
+
+#delete-post {
+
+  .modal-content {
+    width: auto;
+  }
+
+  .box {
+    padding: 1.75rem;
+  }
+}
+
 a#return {
   background: transparentize($black,.3);
   border-radius: .5rem .5rem 0 0;
