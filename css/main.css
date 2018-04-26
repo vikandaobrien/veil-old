@@ -6732,13 +6732,16 @@ label.panel-block {
     background: #dbdbdb;
     color: #b5b5b5; }
 
-#add-post .columns:first-child {
+#add-post .columns:first-child, #add-character .columns:first-child {
   margin-bottom: 0; }
 
-#delete-post .modal-content {
+#add-post .box, #add-character .box {
+  padding: 1.75rem; }
+
+#delete-post .modal-content, #add-game .modal-content, #delete-game .modal-content, #delete-character .modal-content, #edit-profile .modal-content {
   width: auto; }
 
-#delete-post .box {
+#delete-post .box, #add-game .box, #delete-game .box, #delete-character .box, #edit-profile .box {
   padding: 1.75rem; }
 
 a#return {

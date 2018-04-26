@@ -459,14 +459,18 @@
   }
 }
 
-#add-post {
+#add-post, #add-character {
 
   .columns:first-child {
     margin-bottom: 0;
   }
+
+  .box {
+    padding: 1.75rem;
+  }
 }
 
-#delete-post {
+#delete-post, #add-game, #delete-game, #delete-character, #edit-profile {
 
   .modal-content {
     width: auto;
