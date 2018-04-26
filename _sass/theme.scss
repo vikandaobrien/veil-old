@@ -23,7 +23,6 @@
   flex-wrap: wrap;
 
   .featured-post {
-    background: linear-gradient(to right, rgba(0,0,0, .9), rgba(0,0,0, .2)), url('../assets/1.jpeg') center/cover;
     height: 400px;
 
     .card-content {
@@ -43,26 +42,6 @@
 
     img {
       object-fit: cover;
-    }
-  }
-
-  .third-post {
-    height: 250px;
-
-    &.post-img {
-      background: linear-gradient(rgba(0,0,0, .7), rgba(0,0,0, .7)), url('../assets/4.jpeg') center/cover;
-
-      .title {
-        color: $white;
-      }
-    }
-
-    &.post-bg {
-      background: linear-gradient($info, $success);
-
-      .title {
-        color: $white;
-      }
     }
   }
 
@@ -90,6 +69,25 @@
       .column:first-child {
         padding-bottom: 0;
         padding-top: 0;
+      }
+    }
+  }
+
+  .third-post {
+    height: 250px;
+
+    &.post-img {
+
+      .title {
+        color: $white;
+      }
+    }
+
+    &.post-bg {
+      background: linear-gradient($info, $success);
+
+      .title {
+        color: $white;
       }
     }
   }

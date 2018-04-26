@@ -6591,7 +6591,6 @@ footer.footer {
   display: flex;
   flex-wrap: wrap; }
   #posts .featured-post {
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.2)), url("../assets/1.jpeg") center/cover;
     height: 400px; }
     #posts .featured-post .card-content {
       height: 100%;
@@ -6602,16 +6601,6 @@ footer.footer {
     margin-top: -1rem; }
   #posts .post img {
     object-fit: cover; }
-  #posts .third-post {
-    height: 250px; }
-    #posts .third-post.post-img {
-      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../assets/4.jpeg") center/cover; }
-      #posts .third-post.post-img .title {
-        color: white; }
-    #posts .third-post.post-bg {
-      background: linear-gradient(#209cee, #23d160); }
-      #posts .third-post.post-bg .title {
-        color: white; }
   #posts .half-post {
     height: 300px; }
     #posts .half-post.post-img .tags {
@@ -6627,6 +6616,14 @@ footer.footer {
     #posts .full-post.post-img .column:first-child {
       padding-bottom: 0;
       padding-top: 0; }
+  #posts .third-post {
+    height: 250px; }
+    #posts .third-post.post-img .title {
+      color: white; }
+    #posts .third-post.post-bg {
+      background: linear-gradient(#209cee, #23d160); }
+      #posts .third-post.post-bg .title {
+        color: white; }
   #posts .author {
     align-items: center;
     bottom: 1.5rem;
