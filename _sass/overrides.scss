@@ -1,0 +1,24 @@
+.navbar-link::after, .select:not(.is-multiple):not(.is-loading)::after {
+  border-width: 1px;
+  border-radius: 0;
+  height: .5rem;
+  width: .5rem;
+}
+
+footer.footer {
+  padding-bottom: 3rem;
+}
+
+/* BULMA CAROUSEL FIX */
+
+.carousel.is-reversing .carousel-container{-webkit-transform:translateX(100%);transform:translateX(100%)}
+.carousel.is-reversing.is-2 .carousel-container{-webkit-transform:translateX(calc(100% / 2));transform:translateX(calc(100% / 2))}
+.carousel.is-reversing.is-3 .carousel-container{-webkit-transform:translateX(calc(100% / 3));transform:translateX(calc(100% / 3))}
+.carousel.is-reversing.is-4 .carousel-container{-webkit-transform:translateX(calc(100% / 4));transform:translateX(calc(100% / 4))}
+.carousel.is-reversing.is-5 .carousel-container{-webkit-transform:translateX(calc(100% / 5));transform:translateX(calc(100% / 5))}
+
+.hero-carousel.is-reversing .carousel-container{-webkit-transform:translateX(100%);transform:translateX(100%)}
+.hero-carousel.is-reversing.is-2 .carousel-container{-webkit-transform:translateX(calc(100% / 2));transform:translateX(calc(100% / 2))}
+.hero-carousel.is-reversing.is-3 .carousel-container{-webkit-transform:translateX(calc(100% / 3));transform:translateX(calc(100% / 3))}
+.hero-carousel.is-reversing.is-4 .carousel-container{-webkit-transform:translateX(calc(100% / 4));transform:translateX(calc(100% / 4))}
+.hero-carousel.is-reversing.is-5 .carousel-container{-webkit-transform:translateX(calc(100% / 5));transform:translateX(calc(100% / 5))}

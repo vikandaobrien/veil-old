@@ -1,63 +1,3 @@
-.hide {
-  display: none;
-}
-
-.disable {
-  pointer-events: none;
-}
-
-.section {
-  background: $white;
-}
-
-.profile {
-  border-radius: 50%;
-  height: 100%;
-  margin-right: .6rem;
-}
-
-.meta {
-
-  a {
-    font-size: .75rem;
-    height: 25px;
-    letter-spacing: .5px;
-    margin-right: 1rem;
-    text-transform: uppercase;
-  }
-
-  .fa-icon {
-    font-size: 1rem;
-    margin-right: .3rem;
-    margin-top: -2px;
-  }
-}
-
-.info {
-  color: $grey;
-  font-size: .8rem;
-  letter-spacing: .5px;
-  margin-bottom: 1rem;
-  margin-top: -1rem;
-  text-transform: uppercase;
-
-  a {
-    display: inline-block;
-    margin: 0 .3rem;
-  }
-
-  .fa-icon {
-    margin-right: 2px;
-  }
-}
-
-.navbar-link::after, .select:not(.is-multiple):not(.is-loading)::after {
-  border-width: 1px;
-  border-radius: 0;
-  height: .5rem;
-  width: .5rem;
-}
-
 .navbar {
   box-shadow: 0 5px 8px rgba($black, 0.1);
 }
@@ -195,52 +135,6 @@
   }
 }
 
-.members {
-  justify-content: center;
-  display: flex;
-  flex-wrap: wrap;
-
-  .member {
-    height: 125px;
-    margin: .5rem;
-    position: relative;
-    width: 125px;
-
-    img {
-      border-radius: 50%;
-      height: 100%;
-      object-fit: cover;
-      width: 100%;
-    }
-
-    .member-label {
-      align-items: center;
-      background-color: rgba(0,0,0, .7);
-      border-radius: 50%;
-      color: $white;
-      display: flex;
-      font-size: .9rem;
-      font-weight: bold;
-      height: 100%;
-      justify-content: center;
-      letter-spacing: .5px;
-      line-height: 1;
-      opacity: 0;
-      position: absolute;
-      text-align: center;
-      text-shadow: 0 0 2px transparentize($black,.5);
-      text-transform: uppercase;
-      top: 0;
-      transition: all 300ms ease;
-      width: 100%;
-    }
-
-    &:hover .member-label {
-      opacity: 1;
-    }
-  }
-}
-
 .game {
   position: relative;
   text-shadow: 0 0 2px transparentize($black,.5);
@@ -275,44 +169,6 @@
 
 .game-carousel {
   height: 400px;
-}
-
-.game-card {
-  position: relative;
-
-  .game-overlay {
-    background: linear-gradient(rgba(0,0,0, .2), rgba(0,0,0, .8));
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-
-    .game-hover {
-      background: rgba(0,0,0, .5);
-      height: 100%;
-      left: 0;
-      opacity: 0;
-      position: absolute;
-      top: 0;
-      transition: all 300ms ease;
-      width: 100%;
-    }
-
-    &:hover .game-hover {
-      opacity: 1;
-    }
-  }
-
-  img {
-    object-fit: cover;
-  }
-
-  .title {
-    bottom: .75rem;
-    left: 1rem;
-    position: absolute;
-  }
 }
 
 #member-info {
@@ -508,22 +364,3 @@ a#return {
     height: 45px;
   }
 }
-
-footer.footer {
-  padding-bottom: 3rem;
-}
-
-
-/* BULMA CAROUSEL FIX */
-
-.carousel.is-reversing .carousel-container{-webkit-transform:translateX(100%);transform:translateX(100%)}
-.carousel.is-reversing.is-2 .carousel-container{-webkit-transform:translateX(calc(100% / 2));transform:translateX(calc(100% / 2))}
-.carousel.is-reversing.is-3 .carousel-container{-webkit-transform:translateX(calc(100% / 3));transform:translateX(calc(100% / 3))}
-.carousel.is-reversing.is-4 .carousel-container{-webkit-transform:translateX(calc(100% / 4));transform:translateX(calc(100% / 4))}
-.carousel.is-reversing.is-5 .carousel-container{-webkit-transform:translateX(calc(100% / 5));transform:translateX(calc(100% / 5))}
-
-.hero-carousel.is-reversing .carousel-container{-webkit-transform:translateX(100%);transform:translateX(100%)}
-.hero-carousel.is-reversing.is-2 .carousel-container{-webkit-transform:translateX(calc(100% / 2));transform:translateX(calc(100% / 2))}
-.hero-carousel.is-reversing.is-3 .carousel-container{-webkit-transform:translateX(calc(100% / 3));transform:translateX(calc(100% / 3))}
-.hero-carousel.is-reversing.is-4 .carousel-container{-webkit-transform:translateX(calc(100% / 4));transform:translateX(calc(100% / 4))}
-.hero-carousel.is-reversing.is-5 .carousel-container{-webkit-transform:translateX(calc(100% / 5));transform:translateX(calc(100% / 5))}
