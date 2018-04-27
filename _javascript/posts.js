@@ -441,9 +441,9 @@ axios.get('http://localhost:3000/posts')
     const post2 = posts[posts.length-2];
     const post3 = posts[posts.length-3];
     const post4 = posts[posts.length-4];
-    const post5 = posts[posts.length-1];
-    const post6 = posts[posts.length-2];
-    const post7 = posts[posts.length-3];
+    const post5 = posts[posts.length-5];
+    const post6 = posts[posts.length-6];
+    const post7 = posts[posts.length-7];
     featuredPost(post1);
     halfPost(post2);
     halfPostImg(post3);

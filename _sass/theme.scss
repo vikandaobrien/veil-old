@@ -22,19 +22,6 @@
   display: flex;
   flex-wrap: wrap;
 
-  .featured-post {
-    height: 400px;
-
-    .card-content {
-      height: 100%;
-      max-width: 400px;
-
-      .title, .subtitle {
-        color: $white;
-      }
-    }
-  }
-
   .post {
     p {
       margin-top: -1rem;
@@ -42,6 +29,19 @@
 
     img {
       object-fit: cover;
+    }
+  }
+
+  .featured-post {
+    height: 400px;
+
+    .card-content {
+      height: 100%;
+      max-width: 400px;
+
+      .title, .subtitle, .author {
+        color: $white;
+      }
     }
   }
 
@@ -66,9 +66,13 @@
         margin-top: 0;
       }
 
+      .column {
+        padding-top: 0;
+      }
+
       .column:first-child {
         padding-bottom: 0;
-        padding-top: 0;
+        padding-right: 0;
       }
     }
   }
@@ -78,7 +82,7 @@
 
     &.post-img {
 
-      .title {
+      .title, .author {
         color: $white;
       }
     }
@@ -86,7 +90,7 @@
     &.post-bg {
       background: linear-gradient($info, $success);
 
-      .title {
+      .title, .author {
         color: $white;
       }
     }
@@ -134,7 +138,7 @@
 }
 
 #games {
-  
+
   .game {
     position: relative;
     text-shadow: 0 0 2px transparentize($black,.5);
