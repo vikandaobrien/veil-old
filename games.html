@@ -6,8 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Veil | Games</title>
     <link rel="stylesheet" href="css/main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
     <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script defer src="lib/main.js"></script>
+    <script defer src="lib/helper.js"></script>
+    <script defer src="lib/games.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
   </head>
   <body>
@@ -55,46 +58,16 @@
         </div>
       </div>
     </nav>
-
-    <a href="/">
-      <section class="hero is-medium is-dark game game-left">
-        <div class="game-bg">
-        </div>
-        <div class="hero-body">
-          <div class="container">
-            <h1 class="title is-2">
-              Final Fantasy XIV
-            </h1>
-          </div>
-        </div>
-      </section>
-    </a>
-
-    <a href="/">
-      <section class="hero is-medium is-dark game game-right">
-        <div class="game-bg">
-        </div>
-        <div class="hero-body">
-          <div class="container">
-            <h1 class="title is-2">
-              Guild Wars 2
-            </h1>
-          </div>
-        </div>
-      </section>
-    </a>
-
+    <div id="games"></div>    
     <a id="return">
       <span>
         <i class="fas fa-chevron-up"></i>
       </span>
     </a>
-
     <footer class="footer has-text-centered">
       <div class="container">
         Copyright © 2018 Vikanda Gonzales
       </div>
     </footer>
-
   </body>
 </html>

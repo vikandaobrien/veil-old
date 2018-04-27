@@ -6652,25 +6652,25 @@ footer.footer {
     float: right;
     margin-top: -2px; }
 
-.game {
+#games .game {
   position: relative;
   text-shadow: 0 0 2px rgba(10, 10, 10, 0.5); }
-  .game .game-bg {
+  #games .game .game-bg {
     background-color: rgba(0, 0, 0, 0.5);
     height: 100%;
     opacity: 0;
     position: absolute;
     transition: all 300ms ease;
     width: 100%; }
-  .game:hover .game-bg {
+  #games .game:hover .game-bg {
     opacity: 1; }
 
-.game-left {
+#games .game-left {
   background: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.2)), url("../assets/ffxiv.jpg") center/cover; }
 
-.game-right {
+#games .game-right {
   background: linear-gradient(to left, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.2)), url("../assets/gw2.jpg") center/cover; }
-  .game-right .title {
+  #games .game-right .title {
     text-align: right; }
 
 .game-carousel {

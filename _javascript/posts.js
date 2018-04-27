@@ -19,7 +19,7 @@ function featuredPost (post) {
           postTags.forEach((tag) => {
             const tagEle = document.createElement('span');
             addClassesToElement(tagEle, 'tag', 'is-info');
-            tagEle.innerHTML = tag;
+            tagEle.innerHTML = tag.name;
             tags.appendChild(tagEle);
           })
 
@@ -29,18 +29,18 @@ function featuredPost (post) {
 
         const content = document.createElement('p');
         addClassesToElement(content, 'subtitle');
-        content.innerHTML = post.content;
+        content.innerHTML = `${post.content.slice(0,150)}...`;
 
         const author = document.createElement('a');
         addClassesToElement(author, 'author');
 
           const authorImg = document.createElement('img');
           addClassesToElement(authorImg, 'profile');
-          authorImg.src = 'https://placebear.com/200/200';
+          authorImg.src = post.author.image;
           author.appendChild(authorImg);
 
           const authorName = document.createElement('span');
-          authorName.innerHTML = post.author;
+          authorName.innerHTML = `${post.author.fname} ${post.author.lname}`;
           author.appendChild(authorName);
 
       container.appendChild(tags);
@@ -71,7 +71,7 @@ function halfPost (post) {
             postTags.forEach((tag) => {
               const tagEle = document.createElement('span');
               addClassesToElement(tagEle, 'tag', 'is-info');
-              tagEle.innerHTML = tag;
+              tagEle.innerHTML = tag.name;
               tags.appendChild(tagEle);
             })
 
@@ -80,18 +80,18 @@ function halfPost (post) {
           title.innerHTML = post.title;
 
           const content = document.createElement('p');
-          content.innerHTML = post.content;
+          content.innerHTML = `${post.content.slice(0,150)}...`;
 
           const author = document.createElement('a');
           addClassesToElement(author, 'author');
 
             const authorImg = document.createElement('img');
             addClassesToElement(authorImg, 'profile');
-            authorImg.src = 'https://placebear.com/200/200';
+            authorImg.src = post.author.image;
             author.appendChild(authorImg);
 
             const authorName = document.createElement('span');
-            authorName.innerHTML = post.author;
+            authorName.innerHTML = `${post.author.fname} ${post.author.lname}`;
             author.appendChild(authorName);
 
         container.appendChild(tags);
@@ -129,7 +129,7 @@ function halfPostImg (post) {
             postTags.forEach((tag) => {
               const tagEle = document.createElement('span');
               addClassesToElement(tagEle, 'tag', 'is-info');
-              tagEle.innerHTML = tag;
+              tagEle.innerHTML = tag.name;
               tags.appendChild(tagEle);
             })
 
@@ -148,11 +148,11 @@ function halfPostImg (post) {
 
             const authorImg = document.createElement('img');
             addClassesToElement(authorImg, 'profile');
-            authorImg.src = 'https://placebear.com/200/200';
+            authorImg.src = post.author.image;
             author.appendChild(authorImg);
 
             const authorName = document.createElement('span');
-            authorName.innerHTML = post.author;
+            authorName.innerHTML = `${post.author.fname} ${post.author.lname}`;
             author.appendChild(authorName);
 
         container.appendChild(title);
@@ -182,7 +182,7 @@ function fullPost (post) {
         postTags.forEach((tag) => {
           const tagEle = document.createElement('span');
           addClassesToElement(tagEle, 'tag', 'is-info');
-          tagEle.innerHTML = tag;
+          tagEle.innerHTML = tag.name;
           tags.appendChild(tagEle);
         })
 
@@ -191,18 +191,18 @@ function fullPost (post) {
         title.innerHTML = post.title;
 
         const content = document.createElement('p');
-        content.innerHTML = post.content;
+        content.innerHTML = `${post.content.slice(0,150)}...`;
 
         const author = document.createElement('a');
         addClassesToElement(author, 'author');
 
           const authorImg = document.createElement('img');
           addClassesToElement(authorImg, 'profile');
-          authorImg.src = 'https://placebear.com/200/200';
+          authorImg.src = post.author.image;
           author.appendChild(authorImg);
 
           const authorName = document.createElement('span');
-          authorName.innerHTML = post.author;
+          authorName.innerHTML = `${post.author.fname} ${post.author.lname}`;
           author.appendChild(authorName);
 
       container.appendChild(tags);
@@ -255,7 +255,7 @@ function fullPostImg (post) {
             postTags.forEach((tag) => {
               const tagEle = document.createElement('span');
               addClassesToElement(tagEle, 'tag', 'is-info');
-              tagEle.innerHTML = tag;
+              tagEle.innerHTML = tag.name;
               tags.appendChild(tagEle);
             })
 
@@ -264,18 +264,18 @@ function fullPostImg (post) {
             title.innerHTML = post.title;
 
             const content = document.createElement('p');
-            content.innerHTML = post.content;
+            content.innerHTML = `${post.content.slice(0,150)}...`;
 
             const author = document.createElement('a');
             addClassesToElement(author, 'author');
 
               const authorImg = document.createElement('img');
               addClassesToElement(authorImg, 'profile');
-              authorImg.src = 'https://placebear.com/200/200';
+              authorImg.src = post.author.image;
               author.appendChild(authorImg);
 
               const authorName = document.createElement('span');
-              authorName.innerHTML = post.author;
+              authorName.innerHTML = `${post.author.fname} ${post.author.lname}`;
               author.appendChild(authorName);
 
           container.appendChild(tags);
@@ -309,7 +309,7 @@ function thirdPost (post) {
             postTags.forEach((tag) => {
               const tagEle = document.createElement('span');
               addClassesToElement(tagEle, 'tag', 'is-info');
-              tagEle.innerHTML = tag;
+              tagEle.innerHTML = tag.name;
               tags.appendChild(tagEle);
             })
 
@@ -322,11 +322,11 @@ function thirdPost (post) {
 
             const authorImg = document.createElement('img');
             addClassesToElement(authorImg, 'profile');
-            authorImg.src = 'https://placebear.com/200/200';
+            authorImg.src = post.author.image;
             author.appendChild(authorImg);
 
             const authorName = document.createElement('span');
-            authorName.innerHTML = post.author;
+            authorName.innerHTML = `${post.author.fname} ${post.author.lname}`;
             author.appendChild(authorName);
 
         container.appendChild(tags);
@@ -357,7 +357,7 @@ function thirdPostImg (post) {
             postTags.forEach((tag) => {
               const tagEle = document.createElement('span');
               addClassesToElement(tagEle, 'tag', 'is-info');
-              tagEle.innerHTML = tag;
+              tagEle.innerHTML = tag.name;
               tags.appendChild(tagEle);
             })
 
@@ -370,11 +370,11 @@ function thirdPostImg (post) {
 
             const authorImg = document.createElement('img');
             addClassesToElement(authorImg, 'profile');
-            authorImg.src = 'https://placebear.com/200/200';
+            authorImg.src = post.author.image;
             author.appendChild(authorImg);
 
             const authorName = document.createElement('span');
-            authorName.innerHTML = post.author;
+            authorName.innerHTML = `${post.author.fname} ${post.author.lname}`;
             author.appendChild(authorName);
 
         container.appendChild(tags);
@@ -404,7 +404,7 @@ function thirdPostBg (post) {
             postTags.forEach((tag) => {
               const tagEle = document.createElement('span');
               addClassesToElement(tagEle, 'tag', 'is-info');
-              tagEle.innerHTML = tag;
+              tagEle.innerHTML = tag.name;
               tags.appendChild(tagEle);
             })
 
@@ -417,11 +417,11 @@ function thirdPostBg (post) {
 
             const authorImg = document.createElement('img');
             addClassesToElement(authorImg, 'profile');
-            authorImg.src = 'https://placebear.com/200/200';
+            authorImg.src = post.author.image;
             author.appendChild(authorImg);
 
             const authorName = document.createElement('span');
-            authorName.innerHTML = post.author;
+            authorName.innerHTML = `${post.author.fname} ${post.author.lname}`;
             author.appendChild(authorName);
 
         container.appendChild(tags);
@@ -433,8 +433,9 @@ function thirdPostBg (post) {
 
 }
 
-axios.get('https://stormy-fortress-56481.herokuapp.com/posts')
+axios.get('http://localhost:3000/posts')
   .then((response) => {
+    console.log(response);
     const posts = response.data.data;
     const post1 = posts[posts.length-1];
     const post2 = posts[posts.length-2];
