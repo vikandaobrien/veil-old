@@ -88,7 +88,7 @@
     }
 
     &.post-bg {
-      background: linear-gradient($info, $success);
+      background: darken($primary, 20);
 
       .title, .author {
         color: $white;
@@ -131,7 +131,7 @@
   position: sticky;
   top: 4.75rem;
 
-  ul.menu-list li a span {
+  ul.menu-list li a .tag {
     float: right;
     margin-top: -2px;
   }

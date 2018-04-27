@@ -16,9 +16,9 @@ function featuredPost (post) {
         addClassesToElement(tags, 'tags');
 
           const postTags = post.tags;
-          postTags.forEach((tag) => {
+          postTags.forEach(tag => {
             const tagEle = document.createElement('span');
-            addClassesToElement(tagEle, 'tag', 'is-info');
+            addClassesToElement(tagEle, 'tag', tagColor(tag));
             tagEle.innerHTML = tag.name;
             tags.appendChild(tagEle);
           })
@@ -68,9 +68,9 @@ function halfPost (post) {
           addClassesToElement(tags, 'tags');
 
             const postTags = post.tags;
-            postTags.forEach((tag) => {
+            postTags.forEach(tag => {
               const tagEle = document.createElement('span');
-              addClassesToElement(tagEle, 'tag', 'is-info');
+              addClassesToElement(tagEle, 'tag', tagColor(tag));
               tagEle.innerHTML = tag.name;
               tags.appendChild(tagEle);
             })
@@ -126,9 +126,9 @@ function halfPostImg (post) {
           addClassesToElement(tags, 'tags');
 
             const postTags = post.tags;
-            postTags.forEach((tag) => {
+            postTags.forEach(tag => {
               const tagEle = document.createElement('span');
-              addClassesToElement(tagEle, 'tag', 'is-info');
+              addClassesToElement(tagEle, 'tag', tagColor(tag));
               tagEle.innerHTML = tag.name;
               tags.appendChild(tagEle);
             })
@@ -179,9 +179,9 @@ function fullPost (post) {
       addClassesToElement(tags, 'tags');
 
         const postTags = post.tags;
-        postTags.forEach((tag) => {
+        postTags.forEach(tag => {
           const tagEle = document.createElement('span');
-          addClassesToElement(tagEle, 'tag', 'is-info');
+          addClassesToElement(tagEle, 'tag', tagColor(tag));
           tagEle.innerHTML = tag.name;
           tags.appendChild(tagEle);
         })
@@ -252,9 +252,9 @@ function fullPostImg (post) {
           addClassesToElement(tags, 'tags');
 
             const postTags = post.tags;
-            postTags.forEach((tag) => {
+            postTags.forEach(tag => {
               const tagEle = document.createElement('span');
-              addClassesToElement(tagEle, 'tag', 'is-info');
+              addClassesToElement(tagEle, 'tag', tagColor(tag));
               tagEle.innerHTML = tag.name;
               tags.appendChild(tagEle);
             })
@@ -306,9 +306,9 @@ function thirdPost (post) {
           addClassesToElement(tags, 'tags');
 
             const postTags = post.tags;
-            postTags.forEach((tag) => {
+            postTags.forEach(tag => {
               const tagEle = document.createElement('span');
-              addClassesToElement(tagEle, 'tag', 'is-info');
+              addClassesToElement(tagEle, 'tag', tagColor(tag));
               tagEle.innerHTML = tag.name;
               tags.appendChild(tagEle);
             })
@@ -354,9 +354,9 @@ function thirdPostImg (post) {
           addClassesToElement(tags, 'tags');
 
             const postTags = post.tags;
-            postTags.forEach((tag) => {
+            postTags.forEach(tag => {
               const tagEle = document.createElement('span');
-              addClassesToElement(tagEle, 'tag', 'is-info');
+              addClassesToElement(tagEle, 'tag', tagColor(tag));
               tagEle.innerHTML = tag.name;
               tags.appendChild(tagEle);
             })
@@ -401,9 +401,9 @@ function thirdPostBg (post) {
           addClassesToElement(tags, 'tags');
 
             const postTags = post.tags;
-            postTags.forEach((tag) => {
+            postTags.forEach(tag => {
               const tagEle = document.createElement('span');
-              addClassesToElement(tagEle, 'tag', 'is-info');
+              addClassesToElement(tagEle, 'tag', tagColor(tag));
               tagEle.innerHTML = tag.name;
               tags.appendChild(tagEle);
             })
@@ -434,8 +434,7 @@ function thirdPostBg (post) {
 }
 
 axios.get('http://localhost:3000/posts')
-  .then((response) => {
-    console.log(response);
+  .then(response => {
     const posts = response.data.data;
     const post1 = posts[posts.length-1];
     const post2 = posts[posts.length-2];

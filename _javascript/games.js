@@ -57,11 +57,10 @@ function gameRight (game) {
 }
 
 axios.get('http://localhost:3000/games')
-  .then((response) => {
-    console.log(response);
+  .then(response => {
     const games = response.data.data
-    games.forEach((game) => {
-      if ((games).indexOf(game) % 2 === 0) {
+    games.forEach(game => {
+      if (games.indexOf(game) % 2 === 0) {
         gameLeft(game);
       } else {
         gameRight(game);

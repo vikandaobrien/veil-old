@@ -6623,7 +6623,7 @@ footer.footer {
     #posts .third-post.post-img .title, #posts .third-post.post-img .author {
       color: white; }
     #posts .third-post.post-bg {
-      background: linear-gradient(#209cee, #23d160); }
+      background: #006b5b; }
       #posts .third-post.post-bg .title, #posts .third-post.post-bg .author {
         color: white; }
   #posts .author {
@@ -6650,7 +6650,7 @@ footer.footer {
 #tags {
   position: sticky;
   top: 4.75rem; }
-  #tags ul.menu-list li a span {
+  #tags ul.menu-list li a .tag {
     float: right;
     margin-top: -2px; }
 
