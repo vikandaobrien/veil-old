@@ -7,6 +7,11 @@
 
 footer.footer {
   padding-bottom: 3rem;
+
+  &.is-dark {
+    background: $grey-darker;
+    color: $white;
+  }
 }
 
 /* BULMA CAROUSEL FIX */

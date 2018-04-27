@@ -6428,6 +6428,9 @@ label.panel-block {
 
 footer.footer {
   padding-bottom: 3rem; }
+  footer.footer.is-dark {
+    background: #363636;
+    color: white; }
 
 /* BULMA CAROUSEL FIX */
 .carousel.is-reversing .carousel-container {
