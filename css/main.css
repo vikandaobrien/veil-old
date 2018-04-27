@@ -6684,6 +6684,13 @@ footer.footer {
 .game-carousel {
   height: 400px; }
 
+.game-image {
+  height: 400px; }
+  .game-image img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%; }
+
 #member-info .avatar {
   padding: 0 1rem; }
   #member-info .avatar img {

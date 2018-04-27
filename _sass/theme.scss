@@ -176,6 +176,16 @@
   height: 400px;
 }
 
+.game-image {
+  height: 400px;
+
+  img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+  }
+}
+
 #member-info {
 
   .avatar {

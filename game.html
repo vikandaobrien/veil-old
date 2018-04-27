@@ -4,11 +4,14 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Veil | Final Fantasy XIV</title>
+    <title>Veil</title>
     <link rel="stylesheet" href="/node_modules/bulma-extensions/bulma-carousel/dist/bulma-carousel.min.css">
     <link rel="stylesheet" href="css/main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
     <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script defer src="lib/main.js"></script>
+    <script defer src="lib/helper.js"></script>
+    <script defer src="lib/game.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
     <script defer src="/node_modules/bulma-extensions/bulma-carousel/dist/bulma-carousel.min.js"></script>
   </head>
@@ -58,6 +61,7 @@
       </div>
     </nav>
 
+<!--
     <section class="hero has-carousel game-carousel">
       <div class="hero-carousel carousel-animated carousel-animate-fade" data-autoplay="true">
         <div class='carousel-container'>
@@ -87,70 +91,25 @@
         </div>
       </div>
     </section>
+-->
 
+    <section class="game-image"></section>
     <section class="hero is-bold is-light">
       <div class="hero-body">
-        <div class="container">
-          <h1 class="title is-1 has-text-centered">
-            Final Fantasy XIV
-          </h1>
-          <div class="info has-text-centered">
-            <a>
-              <span class="fa-icon">
-                <i class="fas fa-server"></i>
-              </span>
-              Balmung
-            </a>
-            <a>
-              <span class="fa-icon">
-                <i class="fas fa-home"></i>
-              </span>
-              Lavender Beds, Ward 1, Plot 16
-            </a>
-          </div>
-        </div>
+        <div id="game-info" class="container"></div>
+        <br>
+        <div class="members"></div>
       </div>
     </section>
-
-    <section class="hero is-dark is-bold">
-      <div class="hero-body">
-        <div class="container">
-          <div class="columns">
-            <div class="column is-8-desktop is-offset-2-desktop">
-              <h1 class="title is-3 has-text-centered">
-                Players
-              </h1>
-              <div class="members">
-                <div class="member">
-                  <img src="./assets/members/lyon-small.png">
-                  <div class="member-label">
-                    Placeholder
-                  </div>
-                </div>
-                <div class="member">
-                  <img src="./assets/members/shref-small.png">
-                  <div class="member-label">
-                    Placeholder
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <a id="return">
       <span>
         <i class="fas fa-chevron-up"></i>
       </span>
     </a>
-
-    <footer class="footer has-text-centered">
+    <footer class="footer has-text-centered is-dark">
       <div class="container">
         Copyright © 2018 Vikanda Gonzales
       </div>
     </footer>
-
   </body>
 </html>
