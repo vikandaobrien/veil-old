@@ -6479,6 +6479,9 @@ footer.footer {
 .disable {
   pointer-events: none; }
 
+.pointer {
+  cursor: pointer; }
+
 .section {
   background: white; }
 

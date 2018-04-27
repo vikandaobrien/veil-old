@@ -6,7 +6,13 @@ function renderTags (tags) {
     const li = document.createElement('li');
 
       const a = document.createElement('a');
-      a.addEventListener('click', event => {filterPosts(tag)})
+      a.addEventListener('click', event => {
+        if (postsContainer) {
+          filterPosts(tag);
+        } else {
+          window.location = '/';
+        }      
+      })
 
         const name = document.createElement('span');
         name.innerHTML = tag.name;

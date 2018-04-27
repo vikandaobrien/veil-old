@@ -1,15 +1,18 @@
-axios.get('http://localhost:3000/posts')
-  .then(response => {
-    const posts = response.data.data;
-    renderPosts(posts);
-  });
+const postsContainer = document.querySelector('#posts');
 
-const posts = document.querySelector('#posts');
+if (postsContainer) {
+  axios.get('http://localhost:3000/posts')
+    .then(response => {
+      const posts = response.data.data;
+      renderPosts(posts);
+    });
+}
 
 function featuredPost (post) {
 
   const column = document.createElement('div');
-  addClassesToElement(column, 'column', 'is-12');
+  addClassesToElement(column, 'column', 'is-12', 'pointer');
+  column.addEventListener('click', event => {goToPost(post)});
 
     const card = document.createElement('div');
     addClassesToElement(card, 'card', 'post', 'featured-post');
@@ -55,14 +58,15 @@ function featuredPost (post) {
       container.appendChild(author);
     card.appendChild(container);
   column.appendChild(card);
-posts.appendChild(column);
+postsContainer.appendChild(column);
 
 }
 
 function halfPost (post) {
 
     const column = document.createElement('div');
-    addClassesToElement(column, 'column', 'is-6');
+    addClassesToElement(column, 'column', 'is-6', 'pointer');
+    column.addEventListener('click', event => {goToPost(post)});
 
       const card = document.createElement('div');
       addClassesToElement(card, 'card', 'post', 'half-post');
@@ -106,14 +110,15 @@ function halfPost (post) {
         container.appendChild(author);
       card.appendChild(container);
     column.appendChild(card);
-  posts.appendChild(column);
+  postsContainer.appendChild(column);
 
 }
 
 function halfPostImg (post) {
 
     const column = document.createElement('div');
-    addClassesToElement(column, 'column', 'is-6');
+    addClassesToElement(column, 'column', 'is-6', 'pointer');
+    column.addEventListener('click', event => {goToPost(post)});
 
       const card = document.createElement('div');
       addClassesToElement(card, 'card', 'post', 'half-post', 'post-img');
@@ -166,14 +171,15 @@ function halfPostImg (post) {
       card.appendChild(containerImg);
       card.appendChild(container);
     column.appendChild(card);
-  posts.appendChild(column);
+  postsContainer.appendChild(column);
 
 }
 
 function fullPost (post) {
 
   const column = document.createElement('div');
-  addClassesToElement(column, 'column', 'is-12');
+  addClassesToElement(column, 'column', 'is-12', 'pointer');
+  column.addEventListener('click', event => {goToPost(post)});
 
     const card = document.createElement('div');
     addClassesToElement(card, 'card', 'post', 'full-post');
@@ -217,14 +223,15 @@ function fullPost (post) {
       container.appendChild(author);
     card.appendChild(container);
   column.appendChild(card);
-posts.appendChild(column);
+postsContainer.appendChild(column);
 
 }
 
 function fullPostImg (post) {
 
   const column = document.createElement('div');
-  addClassesToElement(column, 'column', 'is-12');
+  addClassesToElement(column, 'column', 'is-12', 'pointer');
+  column.addEventListener('click', event => {goToPost(post)});
 
     const card = document.createElement('div');
     addClassesToElement(card, 'card', 'post', 'full-post', 'post-img');
@@ -293,14 +300,15 @@ function fullPostImg (post) {
       columns.appendChild(columnContent);
     card.appendChild(columns);
   column.appendChild(card);
-posts.appendChild(column);
+postsContainer.appendChild(column);
 
 }
 
 function thirdPost (post) {
 
     const column = document.createElement('div');
-    addClassesToElement(column, 'column', 'is-4');
+    addClassesToElement(column, 'column', 'is-4', 'pointer');
+    column.addEventListener('click', event => {goToPost(post)});
 
       const card = document.createElement('div');
       addClassesToElement(card, 'card', 'post', 'third-post');
@@ -340,14 +348,15 @@ function thirdPost (post) {
         container.appendChild(author);
       card.appendChild(container);
     column.appendChild(card);
-  posts.appendChild(column);
+  postsContainer.appendChild(column);
 
 }
 
 function thirdPostImg (post) {
 
     const column = document.createElement('div');
-    addClassesToElement(column, 'column', 'is-4');
+    addClassesToElement(column, 'column', 'is-4', 'pointer');
+    column.addEventListener('click', event => {goToPost(post)});
 
       const card = document.createElement('div');
       addClassesToElement(card, 'card', 'post', 'third-post', 'post-img');
@@ -388,14 +397,15 @@ function thirdPostImg (post) {
         container.appendChild(author);
       card.appendChild(container);
     column.appendChild(card);
-  posts.appendChild(column);
+  postsContainer.appendChild(column);
 
 }
 
 function thirdPostBg (post) {
 
     const column = document.createElement('div');
-    addClassesToElement(column, 'column', 'is-4');
+    addClassesToElement(column, 'column', 'is-4', 'pointer');
+    column.addEventListener('click', event => {goToPost(post)});
 
       const card = document.createElement('div');
       addClassesToElement(card, 'card', 'post', 'third-post', 'post-bg');
@@ -435,7 +445,7 @@ function thirdPostBg (post) {
         container.appendChild(author);
       card.appendChild(container);
     column.appendChild(card);
-  posts.appendChild(column);
+  postsContainer.appendChild(column);
 
 }
 
@@ -499,4 +509,8 @@ function renderPosts (posts) {
       thirdPostBg(post7);
     }
   }
+}
+
+function goToPost (post) {
+  window.location = `/post.html?id=${post.id}`;
 }
