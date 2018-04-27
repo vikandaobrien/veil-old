@@ -320,7 +320,7 @@
   }
 }
 
-#add-post, #add-character {
+.big-modal {
 
   .columns:first-child {
     margin-bottom: 0;
@@ -331,7 +331,7 @@
   }
 }
 
-#delete-post, #add-game, #delete-game, #delete-character, #edit-profile {
+.small-modal {
 
   .modal-content {
     width: auto;

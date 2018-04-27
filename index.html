@@ -11,6 +11,7 @@
     <script defer src="lib/main.js"></script>
     <script defer src="lib/helper.js"></script>
     <script defer src="lib/posts.js"></script>
+    <script defer src="lib/post-modals.js"></script>
     <script defer src="lib/tags.js"></script>
     <script defer src="lib/filter.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
@@ -95,7 +96,7 @@
                     <ul class="menu-list"></ul>
                   </aside>
                   <hr>
-                  <button class="button is-primary is-fullwidth">Add a Post</button>
+                  <button id="add-post" class="button is-primary is-fullwidth">Add a Post</button>
                 </div>
               </div>
             </div>
@@ -103,6 +104,19 @@
         </div>
       </div>
     </section>
+    <div id="post-modal" class="modal">
+      <div class="modal-background"></div>
+      <div class="modal-content">
+        <div class="box">
+          <article class="media">
+            <div class="media-content">
+              <div class="content"></div>
+            </div>
+          </article>
+        </div>
+      </div>
+      <button id="close-modal" class="modal-close is-large" aria-label="close"></button>
+    </div>
     <a id="return">
       <span>
         <i class="fas fa-chevron-up"></i>

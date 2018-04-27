@@ -6781,16 +6781,16 @@ footer.footer {
     background: #dbdbdb;
     color: #b5b5b5; }
 
-#add-post .columns:first-child, #add-character .columns:first-child {
+.big-modal .columns:first-child {
   margin-bottom: 0; }
 
-#add-post .box, #add-character .box {
+.big-modal .box {
   padding: 1.75rem; }
 
-#delete-post .modal-content, #add-game .modal-content, #delete-game .modal-content, #delete-character .modal-content, #edit-profile .modal-content {
+.small-modal .modal-content {
   width: auto; }
 
-#delete-post .box, #add-game .box, #delete-game .box, #delete-character .box, #edit-profile .box {
+.small-modal .box {
   padding: 1.75rem; }
 
 a#return {

@@ -4,24 +4,27 @@ const postContainer = document.querySelector('#post');
 axios.get(`http://localhost:3000/posts/${postId}`)
   .then(response => {
     const post = response.data.data[0];
+    document.title = `Veil | ${post.title}`;
     singlePost(post);
   });
 
 function singlePost (post) {
 
-  const containerImg = document.createElement('div');
-  addClassesToElement(containerImg, 'card-image');
+  if (post.image) {
+    const containerImg = document.createElement('div');
+    addClassesToElement(containerImg, 'card-image');
 
-    const figure = document.createElement('figure');
-    addClassesToElement(figure, 'image', 'is-2by1');
+      const figure = document.createElement('figure');
+      addClassesToElement(figure, 'image', 'is-2by1');
 
-      const img = document.createElement('img');
-      img.src = post.image;
-      figure.appendChild(img);
+        const img = document.createElement('img');
+        img.src = post.image;
+        figure.appendChild(img);
 
-    containerImg.appendChild(figure);
+      containerImg.appendChild(figure);
 
-  postContainer.appendChild(containerImg);
+    postContainer.appendChild(containerImg);
+  }
 
   const containerContent = document.createElement('div');
   addClassesToElement(containerContent, 'card-content');
@@ -66,11 +69,13 @@ function singlePost (post) {
       meta.appendChild(date);
 
       const editPost = document.createElement('a');
-      editPost.innerHTML = '<span class="fa-icon"><i class="far fa-edit"></i></span> Edit'
+      editPost.innerHTML = '<span class="fa-icon"><i class="far fa-edit"></i></span> Edit';
+      editPost.addEventListener('click', event => {editPostModal()});
       meta.appendChild(editPost);
 
       const deletePost = document.createElement('a');
-      deletePost.innerHTML = '<span class="fa-icon"><i class="far fa-trash-alt"></i></span> Delete'
+      deletePost.innerHTML = '<span class="fa-icon"><i class="far fa-trash-alt"></i></span> Delete';
+      deletePost.addEventListener('click', event => {deletePostModal()});
       meta.appendChild(deletePost);
 
     containerContent.appendChild(meta);
