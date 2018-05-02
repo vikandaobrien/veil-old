@@ -70,7 +70,7 @@ function featuredPost (post) {
 
 }
 
-// RENDER FEATURED POST CARD
+// RENDER HALF POST CARD (no image)
 function halfPost (post) {
 
     const column = document.createElement('div');
@@ -94,12 +94,16 @@ function halfPost (post) {
               tags.appendChild(tagEle);
             })
 
+          container.appendChild(tags);
+
           const title = document.createElement('h1');
           addClassesToElement(title, 'title', 'is-4');
           title.innerHTML = post.title;
+          container.appendChild(title);
 
           const content = document.createElement('p');
           content.innerHTML = `${post.content.slice(0,150)}...`;
+          container.appendChild(content);
 
           const author = document.createElement('a');
           addClassesToElement(author, 'author');
@@ -113,15 +117,17 @@ function halfPost (post) {
             authorName.innerHTML = `${post.author.fname} ${post.author.lname}`;
             author.appendChild(authorName);
 
-        container.appendChild(tags);
-        container.appendChild(title);
-        container.appendChild(content);
-        container.appendChild(author);
+          container.appendChild(author);
+
       card.appendChild(container);
+
     column.appendChild(card);
+
   postsContainer.appendChild(column);
 
 }
+
+// RENDER HALF POST CARD (with image)
 
 function halfPostImg (post) {
 
@@ -142,6 +148,8 @@ function halfPostImg (post) {
             img.src = post.image;
             figure.appendChild(img);
 
+          containerImg.appendChild(figure);
+
           const tags = document.createElement('div');
           addClassesToElement(tags, 'tags');
 
@@ -153,8 +161,9 @@ function halfPostImg (post) {
               tags.appendChild(tagEle);
             })
 
-        containerImg.appendChild(figure);
-        containerImg.appendChild(tags);
+          containerImg.appendChild(tags);
+
+        card.appendChild(containerImg);
 
         const container = document.createElement('div');
         addClassesToElement(container, 'card-content');
@@ -162,6 +171,7 @@ function halfPostImg (post) {
           const title = document.createElement('h1');
           addClassesToElement(title, 'title', 'is-4');
           title.innerHTML = post.title;
+          container.appendChild(title);
 
           const author = document.createElement('a');
           addClassesToElement(author, 'author');
@@ -175,14 +185,17 @@ function halfPostImg (post) {
             authorName.innerHTML = `${post.author.fname} ${post.author.lname}`;
             author.appendChild(authorName);
 
-        container.appendChild(title);
-        container.appendChild(author);
-      card.appendChild(containerImg);
-      card.appendChild(container);
+          container.appendChild(author);
+
+        card.appendChild(container);
+
     column.appendChild(card);
+
   postsContainer.appendChild(column);
 
 }
+
+// RENDER FULL POST CARD (no image)
 
 function fullPost (post) {
 
@@ -196,23 +209,27 @@ function fullPost (post) {
       const container = document.createElement('div');
       addClassesToElement(container, 'card-content');
 
-      const tags = document.createElement('div');
-      addClassesToElement(tags, 'tags');
+        const tags = document.createElement('div');
+        addClassesToElement(tags, 'tags');
 
-        const postTags = post.tags;
-        postTags.forEach(tag => {
-          const tagEle = document.createElement('span');
-          addClassesToElement(tagEle, 'tag', tagColor(tag));
-          tagEle.innerHTML = tag.name;
-          tags.appendChild(tagEle);
-        })
+          const postTags = post.tags;
+          postTags.forEach(tag => {
+            const tagEle = document.createElement('span');
+            addClassesToElement(tagEle, 'tag', tagColor(tag));
+            tagEle.innerHTML = tag.name;
+            tags.appendChild(tagEle);
+          })
+
+        container.appendChild(tags);
 
         const title = document.createElement('h1');
         addClassesToElement(title, 'title', 'is-3');
         title.innerHTML = post.title;
+        container.appendChild(title);
 
         const content = document.createElement('p');
         content.innerHTML = `${post.content.slice(0,500)}...`;
+        container.appendChild(content);
 
         const author = document.createElement('a');
         addClassesToElement(author, 'author');
@@ -226,15 +243,17 @@ function fullPost (post) {
           authorName.innerHTML = `${post.author.fname} ${post.author.lname}`;
           author.appendChild(authorName);
 
-      container.appendChild(tags);
-      container.appendChild(title);
-      container.appendChild(content);
-      container.appendChild(author);
-    card.appendChild(container);
-  column.appendChild(card);
-postsContainer.appendChild(column);
+        container.appendChild(author);
+
+      card.appendChild(container);
+
+    column.appendChild(card);
+
+  postsContainer.appendChild(column);
 
 }
+
+// RENDER FULL POST CARD (with image)
 
 function fullPostImg (post) {
 
@@ -261,8 +280,11 @@ function fullPostImg (post) {
               img.src = post.image;
               figure.appendChild(img);
 
-          containerImg.appendChild(figure);
-        columnImg.appendChild(containerImg);
+            containerImg.appendChild(figure);
+
+          columnImg.appendChild(containerImg);
+
+        columns.appendChild(columnImg);
 
         const columnContent = document.createElement('div');
         addClassesToElement(columnContent, 'column', 'is-7');
@@ -270,23 +292,27 @@ function fullPostImg (post) {
           const container = document.createElement('div');
           addClassesToElement(container, 'card-content');
 
-          const tags = document.createElement('div');
-          addClassesToElement(tags, 'tags');
+            const tags = document.createElement('div');
+            addClassesToElement(tags, 'tags');
 
-            const postTags = post.tags;
-            postTags.forEach(tag => {
-              const tagEle = document.createElement('span');
-              addClassesToElement(tagEle, 'tag', tagColor(tag));
-              tagEle.innerHTML = tag.name;
-              tags.appendChild(tagEle);
-            })
+              const postTags = post.tags;
+              postTags.forEach(tag => {
+                const tagEle = document.createElement('span');
+                addClassesToElement(tagEle, 'tag', tagColor(tag));
+                tagEle.innerHTML = tag.name;
+                tags.appendChild(tagEle);
+              });
+
+            container.appendChild(tags);
 
             const title = document.createElement('h1');
             addClassesToElement(title, 'title', 'is-4');
             title.innerHTML = post.title;
+            container.appendChild(title);
 
             const content = document.createElement('p');
             content.innerHTML = `${post.content.slice(0,150)}...`;
+            container.appendChild(content);
 
             const author = document.createElement('a');
             addClassesToElement(author, 'author');
@@ -300,18 +326,21 @@ function fullPostImg (post) {
               authorName.innerHTML = `${post.author.fname} ${post.author.lname}`;
               author.appendChild(authorName);
 
-          container.appendChild(tags);
-          container.appendChild(title);
-          container.appendChild(content);
-          container.appendChild(author);
-        columnContent.appendChild(container);
-      columns.appendChild(columnImg);
-      columns.appendChild(columnContent);
-    card.appendChild(columns);
-  column.appendChild(card);
-postsContainer.appendChild(column);
+            container.appendChild(author);
+
+          columnContent.appendChild(container);
+
+        columns.appendChild(columnContent);
+
+      card.appendChild(columns);
+
+    column.appendChild(card);
+
+  postsContainer.appendChild(column);
 
 }
+
+// RENDER THIRD POST CARD (no image)
 
 function thirdPost (post) {
 
@@ -360,6 +389,8 @@ function thirdPost (post) {
   postsContainer.appendChild(column);
 
 }
+
+// RENDER THIRD POST CARD (with image)
 
 function thirdPostImg (post) {
 
@@ -410,6 +441,8 @@ function thirdPostImg (post) {
 
 }
 
+// RENDER THIRD POST CARD (with dark bg)
+
 function thirdPostBg (post) {
 
     const column = document.createElement('div');
@@ -458,6 +491,7 @@ function thirdPostBg (post) {
 
 }
 
+// RENDER LATEST 7 POSTS
 function renderPosts (posts) {
   const post1 = posts[posts.length-1];
   const post2 = posts[posts.length-2];
@@ -520,6 +554,7 @@ function renderPosts (posts) {
   }
 }
 
+// Link each card to corresponding post
 function goToPost (post) {
   window.location = `/post.html?id=${post.id}`;
 }
