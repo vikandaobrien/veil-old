@@ -61,3 +61,85 @@ $(window).scroll(function() {
 		'transform' : 'translate(0px, ' + parallaxScroll/20 + '%)'
 	});
 });
+
+// ===== Nav Bar Account =====
+
+const account = document.querySelector('#account');
+
+function notLoggedIn () {
+  empty(account);
+
+  const a = document.createElement('a');
+  addClassesToElement(a, 'navbar-item');
+  a.href = '/login.html';
+  a.innerHTML = 'Log In';
+  account.appendChild(a);
+}
+
+function loggedIn (user) {
+  empty(account);
+
+  const div = document.createElement('div');
+  addClassesToElement(div, 'navbar-item', 'has-dropdown', 'is-hoverable');
+
+    const a = document.createElement('a');
+    addClassesToElement(a, 'navbar-link', 'is-hidden-touch');
+
+      const img = document.createElement('img');
+      addClassesToElement(img, 'profile');
+      img.src = 'https://goo.gl/BnD1wn';
+      a.appendChild(img);
+
+      const name = document.createElement('span');
+      name.innerHTML = 'Test';
+      a.appendChild(name);
+
+    div.appendChild(a);
+
+    const dropdown = document.createElement('div');
+    addClassesToElement(dropdown, 'navbar-dropdown', 'is-right');
+
+      const profile = document.createElement('a');
+      addClassesToElement(profile, 'navbar-item');
+      profile.href = '/profile.html';
+      profile.innerHTML = 'Profile';
+      dropdown.appendChild(profile);
+
+      const hr = document.createElement('hr');
+      addClassesToElement(hr, 'navbar-divider');
+      dropdown.appendChild(hr);
+
+      const logout = document.createElement('a');
+      addClassesToElement(logout, 'navbar-item', 'is-active');
+      logout.href = '/';
+      logout.innerHTML = 'Log Out';
+      logout.addEventListener('click', event => {
+        localStorage.removeItem('token');
+      });
+      dropdown.appendChild(logout);
+
+    div.appendChild(dropdown);
+
+  account.appendChild(div);
+}
+
+// Members
+
+const vika = document.querySelector('#vika');
+
+if (vika) {
+
+  const character = document.querySelector('#character-info');
+  const html = document.querySelector('html');
+
+  vika.addEventListener('click', event => {
+    character.classList.add('is-active');
+    html.classList.add('is-clipped');
+  });
+
+  const close = document.querySelector('#close');
+  close.addEventListener('click', event => {
+    html.classList.add('is-clipped');
+    character.classList.remove('is-active');
+  });
+}

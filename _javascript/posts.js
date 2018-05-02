@@ -1,6 +1,8 @@
 const postsContainer = document.querySelector('#posts');
 
+// Home page only
 if (postsContainer) {
+  // GET ALL request to grab all posts and populate
   axios.get('http://localhost:3000/posts')
     .then(response => {
       const posts = response.data.data;
@@ -8,6 +10,7 @@ if (postsContainer) {
     });
 }
 
+// RENDER FEATURED POST CARD
 function featuredPost (post) {
 
   const column = document.createElement('div');
@@ -16,7 +19,9 @@ function featuredPost (post) {
 
     const card = document.createElement('div');
     addClassesToElement(card, 'card', 'post', 'featured-post');
-    card.style.background = `linear-gradient(to right, rgba(0,0,0, .9), rgba(0,0,0, .2)), url(${post.image}) center/cover`;
+    if (post.image !== '') {
+      card.style.background = `linear-gradient(to right, rgba(0,0,0, .9), rgba(0,0,0, .2)), url(${post.image}) center/cover`;
+    }
 
       const container = document.createElement('div');
       addClassesToElement(container, 'card-content');
@@ -32,16 +37,21 @@ function featuredPost (post) {
             tags.appendChild(tagEle);
           })
 
+        container.appendChild(tags);
+
         const title = document.createElement('h1');
         addClassesToElement(title, 'title', 'is-2');
         title.innerHTML = post.title;
+        container.appendChild(title);
 
         const content = document.createElement('p');
         addClassesToElement(content, 'subtitle');
         content.innerHTML = `${post.content.slice(0,150)}...`;
+        container.appendChild(content);
 
         const author = document.createElement('a');
         addClassesToElement(author, 'author');
+        container.appendChild(author);
 
           const authorImg = document.createElement('img');
           addClassesToElement(authorImg, 'profile');
@@ -52,16 +62,15 @@ function featuredPost (post) {
           authorName.innerHTML = `${post.author.fname} ${post.author.lname}`;
           author.appendChild(authorName);
 
-      container.appendChild(tags);
-      container.appendChild(title);
-      container.appendChild(content);
-      container.appendChild(author);
-    card.appendChild(container);
-  column.appendChild(card);
-postsContainer.appendChild(column);
+      card.appendChild(container);
+
+    column.appendChild(card);
+
+  postsContainer.appendChild(column);
 
 }
 
+// RENDER FEATURED POST CARD
 function halfPost (post) {
 
     const column = document.createElement('div');

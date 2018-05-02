@@ -6601,6 +6601,7 @@ footer.footer {
   #posts .post img {
     object-fit: cover; }
   #posts .featured-post {
+    background: #006b5b;
     height: 400px; }
     #posts .featured-post .card-content {
       height: 100%;
@@ -6673,13 +6674,8 @@ footer.footer {
   #games .game:hover .game-bg {
     opacity: 1; }
 
-#games .game-left {
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.2)), url("../assets/ffxiv.jpg") center/cover; }
-
-#games .game-right {
-  background: linear-gradient(to left, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.2)), url("../assets/gw2.jpg") center/cover; }
-  #games .game-right .title {
-    text-align: right; }
+#games .game-right .title {
+  text-align: right; }
 
 .game-carousel {
   height: 400px; }

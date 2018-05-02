@@ -68,15 +68,20 @@ function singlePost (post) {
       date.innerHTML = `<span class="fa-icon"><i class="far fa-calendar-alt"></i></span> ${post.created_at.slice(0,10)}`
       meta.appendChild(date);
 
-      const editPost = document.createElement('a');
-      editPost.innerHTML = '<span class="fa-icon"><i class="far fa-edit"></i></span> Edit';
-      editPost.addEventListener('click', event => {editPostModal()});
-      meta.appendChild(editPost);
+      request('/auth/token')
+      .then(function(response){
+        if (response.data.id === post.author.id) {
+          const editPost = document.createElement('a');
+          editPost.innerHTML = '<span class="fa-icon"><i class="far fa-edit"></i></span> Edit';
+          editPost.addEventListener('click', event => {editPostModal(post)});
+          meta.appendChild(editPost);
 
-      const deletePost = document.createElement('a');
-      deletePost.innerHTML = '<span class="fa-icon"><i class="far fa-trash-alt"></i></span> Delete';
-      deletePost.addEventListener('click', event => {deletePostModal()});
-      meta.appendChild(deletePost);
+          const deletePost = document.createElement('a');
+          deletePost.innerHTML = '<span class="fa-icon"><i class="far fa-trash-alt"></i></span> Delete';
+          deletePost.addEventListener('click', event => {deletePostModal()});
+          meta.appendChild(deletePost);
+        }
+      })
 
     containerContent.appendChild(meta);
 

@@ -7,8 +7,12 @@
     <title>Veil | Log In</title>
     <link rel="stylesheet" href="/node_modules/bulma-extensions/bulma-carousel/dist/bulma-carousel.min.css">
     <link rel="stylesheet" href="css/main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
     <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script defer src="lib/main.js"></script>
+    <script defer src="lib/helper.js"></script>
+    <script defer src="lib/login.js"></script>
+    <script defer src="lib/protected.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
   </head>
   <body>
@@ -16,7 +20,7 @@
       <div class="container">
         <div class="navbar-brand">
           <a class="navbar-item" href="/">
-            <img src="https://bulma.io/images/bulma-logo.png" alt="Veil">
+            <h1 class="title">VEIL</h1>
           </a>
           <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
             <span aria-hidden="true"></span>
@@ -36,23 +40,7 @@
               Members
             </a>
           </div>
-          <div class="navbar-end">
-            <div class="navbar-item has-dropdown is-hoverable">
-              <a class="navbar-link is-hidden-touch">
-                <img class="profile" src="photo.jpg" alt="Vikanda">
-                Vikanda
-              </a>
-              <div class="navbar-dropdown is-right">
-                <a class="navbar-item">
-                  Profile
-                </a>
-                <hr class="navbar-divider">
-                <a class="navbar-item is-active">
-                  Log Out
-                </a>
-              </div>
-            </div>
-          </div>
+          <div id="account" class="navbar-end"></div>
         </div>
       </div>
     </nav>
@@ -63,26 +51,28 @@
           <div class="columns">
             <div class="column is-4-desktop is-offset-4-desktop">
 
-              <div class="field">
-                <p class="control has-icons-left">
-                  <input class="input" type="email" placeholder="Email">
-                  <span class="icon is-small is-left">
-                    <i class="fas fa-envelope"></i>
-                  </span>
-                </p>
-              </div>
-              <div class="field">
-                <p class="control has-icons-left">
-                  <input class="input" type="password" placeholder="Password">
-                  <span class="icon is-small is-left">
-                    <i class="fas fa-lock"></i>
-                  </span>
-                </p>
-              </div>
-              <div class="control">
-                <button class="button is-primary is-fullwidth">Log In</button>
-              </div>
-              <p class="help is-danger">Email or password is invalid.</p>
+              <form>
+                <div class="field">
+                  <p class="control has-icons-left">
+                    <input class="input" type="email" placeholder="Email" id="email" required>
+                    <span class="icon is-small is-left">
+                      <i class="fas fa-envelope"></i>
+                    </span>
+                  </p>
+                </div>
+                <div class="field">
+                  <p class="control has-icons-left">
+                    <input class="input" type="password" placeholder="Password" id="password" required>
+                    <span class="icon is-small is-left">
+                      <i class="fas fa-lock"></i>
+                    </span>
+                  </p>
+                </div>
+                <div class="control">
+                  <button class="button is-primary is-fullwidth">Log In</button>
+                </div>
+                <p id="error" class="help is-danger is-hidden">Email or password is incorrect.</p>
+              </form>
             </div>
           </div>
         </div>
@@ -94,12 +84,10 @@
         <i class="fas fa-chevron-up"></i>
       </span>
     </a>
-
     <footer class="footer has-text-centered">
       <div class="container">
         Copyright © 2018 Vikanda Gonzales
       </div>
     </footer>
-
   </body>
 </html>

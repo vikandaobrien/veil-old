@@ -11,6 +11,7 @@
     <script defer src="lib/main.js"></script>
     <script defer src="lib/helper.js"></script>
     <script defer src="lib/members.js"></script>
+    <script defer src="lib/protected.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
   </head>
   <body>
@@ -18,7 +19,7 @@
       <div class="container">
         <div class="navbar-brand">
           <a class="navbar-item" href="/">
-            <img src="https://bulma.io/images/bulma-logo.png" alt="Veil">
+            <h1 class="title">VEIL</h1>
           </a>
           <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
             <span aria-hidden="true"></span>
@@ -38,23 +39,7 @@
               Members
             </a>
           </div>
-          <div class="navbar-end">
-            <div class="navbar-item has-dropdown is-hoverable">
-              <a class="navbar-link is-hidden-touch">
-                <img class="profile" src="photo.jpg" alt="Vikanda">
-                Vikanda
-              </a>
-              <div class="navbar-dropdown is-right">
-                <a class="navbar-item">
-                  Profile
-                </a>
-                <hr class="navbar-divider">
-                <a class="navbar-item is-active">
-                  Log Out
-                </a>
-              </div>
-            </div>
-          </div>
+          <div id="account" class="navbar-end"></div>
         </div>
       </div>
     </nav>

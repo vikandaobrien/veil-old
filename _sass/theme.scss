@@ -33,6 +33,7 @@
   }
 
   .featured-post {
+    background: darken($primary, 20);
     height: 400px;
 
     .card-content {
@@ -160,11 +161,9 @@
   }
 
   .game-left {
-    background: linear-gradient(to right, rgba(0,0,0, .9), rgba(0,0,0, .2)), url('../assets/ffxiv.jpg') center/cover;
   }
 
   .game-right {
-    background: linear-gradient(to left, rgba(0,0,0, .9), rgba(0,0,0, .2)), url('../assets/gw2.jpg') center/cover;
 
     .title {
       text-align: right;
