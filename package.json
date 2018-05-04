@@ -14,8 +14,8 @@
     "start": "npm run css-watch | npm run js-watch"
   },
   "repository": {
-      "type": "git",
-      "url": "git+https://github.com/vikandagonzales/veil.git"
+    "type": "git",
+    "url": "git+https://github.com/vikandagonzales/veil.git"
   },
   "keywords": [
     "html",
