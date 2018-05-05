@@ -47,139 +47,142 @@
         <div class="container">
           <div class="columns">
             <div class="column is-6-desktop is-offset-3-desktop">
-              <div id="signup" class="card">
+              <div class="card">
                 <div class="card-content">
-
-                  <div class="field is-horizontal">
-                    <div class="field-body">
-                      <div class="field">
-                        <p class="control is-expanded has-icons-left">
-                          <input class="input" type="text" placeholder="First Name">
-                          <span class="icon is-small is-left">
-                            <i class="fas fa-user"></i>
-                          </span>
-                        </p>
-                      </div>
-                      <div class="field">
-                        <p class="control is-expanded has-icons-left">
-                          <input class="input" type="text" placeholder="Last Name">
-                          <span class="icon is-small is-left">
-                            <i class="fas fa-user"></i>
-                          </span>
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="field">
-                    <p class="control is-expanded has-icons-left">
-                      <input class="input" type="text" placeholder="Location">
-                      <span class="icon is-small is-left">
-                        <i class="fas fa-map-marker-alt"></i>
-                      </span>
-                    </p>
-                  </div>
-
-                  <div class="field">
-                    <div class="control has-icons-left">
-                      <span class="select is-fullwidth">
-                        <select>
-                          <option disabled selected>Timezone</option>
-                          <option>UTC-8:00</option>
-                          <option>UTC-9:00</option>
-                          <option>UTC-10:00</option>
-                        </select>
-                      </span>
-                      <span class="icon is-small is-left">
-                        <i class="fas fa-clock"></i>
-                      </span>
-                    </div>
-                  </div>
-
-                  <div class="field is-horizontal">
-
-                    <div class="field-body">
-
-                      <div class="field">
-                        <div class="control">
-                          <span class="select is-fullwidth">
-                            <select>
-                              <option disabled selected>Month</option>
-                              <option>January</option>
-                              <option>February</option>
-                              <option>March</option>
-                            </select>
-                          </span>
+                  <form id="signup">
+                    <div class="field is-horizontal">
+                      <div class="field-body">
+                        <div class="field">
+                          <p class="control is-expanded has-icons-left">
+                            <input id="fname" class="input" type="text" placeholder="First Name">
+                            <span class="icon is-small is-left">
+                              <i class="fas fa-user"></i>
+                            </span>
+                          </p>
                         </div>
-                      </div>
-                      <div class="field">
-                        <div class="control">
-                          <span class="select is-fullwidth">
-                            <select>
-                              <option disabled selected>Day</option>
-                              <option>1</option>
-                              <option>2</option>
-                              <option>3</option>
-                            </select>
-                          </span>
-                        </div>
-                      </div>
-                      <div class="field">
-                        <div class="control">
-                          <span class="select is-fullwidth">
-                            <select>
-                              <option disabled selected>Year</option>
-                              <option>2018</option>
-                              <option>2017</option>
-                              <option>2016</option>
-                            </select>
-                          </span>
+                        <div class="field">
+                          <p class="control is-expanded has-icons-left">
+                            <input id="lname" class="input" type="text" placeholder="Last Name">
+                            <span class="icon is-small is-left">
+                              <i class="fas fa-user"></i>
+                            </span>
+                          </p>
                         </div>
                       </div>
                     </div>
-                  </div>
 
-                  <hr>
+                    <div class="field">
+                      <p class="control is-expanded has-icons-left">
+                        <input id="location" class="input" type="text" placeholder="Location">
+                        <span class="icon is-small is-left">
+                          <i class="fas fa-map-marker-alt"></i>
+                        </span>
+                      </p>
+                    </div>
 
-                  <div class="field">
-                    <p class="control has-icons-left">
-                      <input class="input" type="email" placeholder="Email">
-                      <span class="icon is-small is-left">
-                        <i class="fas fa-envelope"></i>
-                      </span>
-                    </p>
-                  </div>
+                    <div class="field">
+                      <div class="control has-icons-left">
+                        <span class="select is-fullwidth">
+                          <select id="timezone">
+                            <option disabled selected>Timezone</option>
+                            <option>UTC-8:00</option>
+                            <option>UTC-9:00</option>
+                            <option>UTC-10:00</option>
+                          </select>
+                        </span>
+                        <span class="icon is-small is-left">
+                          <i class="fas fa-clock"></i>
+                        </span>
+                      </div>
+                    </div>
 
-                  <div class="field">
-                    <p class="control has-icons-left">
-                      <input class="input" type="password" placeholder="Password">
-                      <span class="icon is-small is-left">
-                        <i class="fas fa-lock"></i>
-                      </span>
-                    </p>
-                  </div>
+                    <div class="field is-horizontal">
 
-                  <div class="field">
-                    <p class="control has-icons-left">
-                      <input class="input" type="password" placeholder="Key">
-                      <span class="icon is-small is-left">
-                        <i class="fas fa-key"></i>
-                      </span>
-                    </p>
-                  </div>
+                      <div class="field-body">
 
-                  <div class="control">
-                    <button class="button is-primary is-fullwidth">Sign Up</button>
-                  </div>
+                        <div class="field">
+                          <div class="control">
+                            <span class="select is-fullwidth">
+                              <select id="month">
+                                <option disabled selected>Month</option>
+                                <option>January</option>
+                                <option>February</option>
+                                <option>March</option>
+                              </select>
+                            </span>
+                          </div>
+                        </div>
+                        <div class="field">
+                          <div class="control">
+                            <span class="select is-fullwidth">
+                              <select id="day">
+                                <option disabled selected>Day</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                              </select>
+                            </span>
+                          </div>
+                        </div>
+                        <div class="field">
+                          <div class="control">
+                            <span class="select is-fullwidth">
+                              <select id="year">
+                                <option disabled selected>Year</option>
+                                <option>2018</option>
+                                <option>2017</option>
+                                <option>2016</option>
+                              </select>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
 
-                  <p class="help is-danger is-hidden">Email or password is invalid.</p>
+                    <hr>
 
-                  <hr>
+                    <div class="field">
+                      <p class="control has-icons-left">
+                        <input id="email" class="input" type="email" placeholder="Email">
+                        <span class="icon is-small is-left">
+                          <i class="fas fa-envelope"></i>
+                        </span>
+                      </p>
+                    </div>
 
-                  <div class="level">
-                    <p>Already have an account?</p>
-                    <a class="button is-primary is-outlined">Log In</a>
-                  </div>
+                    <div class="field">
+                      <p class="control has-icons-left">
+                        <input id="password" class="input" type="password" placeholder="Password">
+                        <span class="icon is-small is-left">
+                          <i class="fas fa-lock"></i>
+                        </span>
+                      </p>
+                    </div>
+
+                    <div class="field">
+                      <p class="control has-icons-left">
+                        <input id="key" class="input" type="password" placeholder="Key">
+                        <span class="icon is-small is-left">
+                          <i class="fas fa-key"></i>
+                        </span>
+                      </p>
+                    </div>
+
+                    <div class="control">
+                      <button class="button is-primary is-fullwidth">Sign Up</button>
+                    </div>
+
+                    <p class="help is-danger is-hidden">Email or password is invalid.</p>
+
+                    <hr>
+
+                    <div class="level">
+                      <p>Already have an account?</p>
+                      <a class="button is-primary is-outlined" href="/login.html">Log In</a>
+                    </div>
+
+                  </form>
+
                 </div>
               </div>
 
