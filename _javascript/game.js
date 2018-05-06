@@ -5,7 +5,6 @@ const memberContainer = document.querySelector('.members');
 
 axios.get(`http://localhost:3000/games/${gameId}`)
   .then(response => {
-    console.log(response.data.data[0]);
     const game = response.data.data[0];
     document.title = `Veil | ${game.name}`;
     singleGame(game);
