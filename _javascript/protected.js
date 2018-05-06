@@ -5,7 +5,7 @@
   request('/auth/token')
   .then(function(response){
     // user is logged in
-  //  console.log(response.data);
+    console.log(response.data);
   //  loggedIn(response.data);
     loggedIn();
   })

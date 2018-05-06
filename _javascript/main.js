@@ -69,15 +69,23 @@ const account = document.querySelector('#account');
 function notLoggedIn () {
   empty(account);
 
-  const a = document.createElement('a');
-  addClassesToElement(a, 'navbar-item');
-  a.href = '/login.html';
-  a.innerHTML = 'Log In';
-  account.appendChild(a);
+  const logIn = document.createElement('a');
+  addClassesToElement(logIn, 'navbar-item');
+  logIn.href = '/login.html';
+  logIn.innerHTML = 'Log In';
+  account.appendChild(logIn);
+
+  const signUp = document.createElement('a');
+  addClassesToElement(signUp, 'navbar-item');
+  signUp.href = '/signup.html';
+  signUp.innerHTML = 'Sign Up';
+  account.appendChild(signUp);
 }
 
 function loggedIn (user) {
   empty(account);
+
+  console.log(user);
 
   const div = document.createElement('div');
   addClassesToElement(div, 'navbar-item', 'has-dropdown', 'is-hoverable');

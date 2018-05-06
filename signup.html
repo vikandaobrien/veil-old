@@ -7,8 +7,11 @@
     <title>Veil | Sign Up</title>
     <link rel="stylesheet" href="/node_modules/bulma-extensions/bulma-carousel/dist/bulma-carousel.min.css">
     <link rel="stylesheet" href="css/main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
     <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script defer src="lib/main.js"></script>
+    <script defer src="lib/helper.js"></script>
+    <script defer src="lib/signup.js"></script>
     <script defer src="lib/protected.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
   </head>
@@ -49,12 +52,12 @@
             <div class="column is-6-desktop is-offset-3-desktop">
               <div class="card">
                 <div class="card-content">
-                  <form id="signup">
+                  <form>
                     <div class="field is-horizontal">
                       <div class="field-body">
                         <div class="field">
                           <p class="control is-expanded has-icons-left">
-                            <input id="fname" class="input" type="text" placeholder="First Name">
+                            <input id="fname" class="input" type="text" placeholder="First Name" required>
                             <span class="icon is-small is-left">
                               <i class="fas fa-user"></i>
                             </span>
@@ -62,7 +65,7 @@
                         </div>
                         <div class="field">
                           <p class="control is-expanded has-icons-left">
-                            <input id="lname" class="input" type="text" placeholder="Last Name">
+                            <input id="lname" class="input" type="text" placeholder="Last Name" required>
                             <span class="icon is-small is-left">
                               <i class="fas fa-user"></i>
                             </span>
@@ -73,7 +76,7 @@
 
                     <div class="field">
                       <p class="control is-expanded has-icons-left">
-                        <input id="location" class="input" type="text" placeholder="Location">
+                        <input id="location" class="input" type="text" placeholder="Location" required>
                         <span class="icon is-small is-left">
                           <i class="fas fa-map-marker-alt"></i>
                         </span>
@@ -83,7 +86,7 @@
                     <div class="field">
                       <div class="control has-icons-left">
                         <span class="select is-fullwidth">
-                          <select id="timezone">
+                          <select id="timezone" required>
                             <option disabled selected>Timezone</option>
                             <option>UTC-8:00</option>
                             <option>UTC-9:00</option>
@@ -96,46 +99,12 @@
                       </div>
                     </div>
 
-                    <div class="field is-horizontal">
-
-                      <div class="field-body">
-
-                        <div class="field">
-                          <div class="control">
-                            <span class="select is-fullwidth">
-                              <select id="month">
-                                <option disabled selected>Month</option>
-                                <option>January</option>
-                                <option>February</option>
-                                <option>March</option>
-                              </select>
-                            </span>
-                          </div>
-                        </div>
-                        <div class="field">
-                          <div class="control">
-                            <span class="select is-fullwidth">
-                              <select id="day">
-                                <option disabled selected>Day</option>
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                              </select>
-                            </span>
-                          </div>
-                        </div>
-                        <div class="field">
-                          <div class="control">
-                            <span class="select is-fullwidth">
-                              <select id="year">
-                                <option disabled selected>Year</option>
-                                <option>2018</option>
-                                <option>2017</option>
-                                <option>2016</option>
-                              </select>
-                            </span>
-                          </div>
-                        </div>
+                    <div class="field">
+                      <div class="control has-icons-left">
+                        <input id="birthday" class="input" type="text" onfocus="(this.type='date')" placeholder="Birthday" required>
+                        <span class="icon is-small is-left">
+                          <i class="fas fa-birthday-cake"></i>
+                        </span>
                       </div>
                     </div>
 
@@ -143,7 +112,7 @@
 
                     <div class="field">
                       <p class="control has-icons-left">
-                        <input id="email" class="input" type="email" placeholder="Email">
+                        <input id="email" class="input" type="email" placeholder="Email" required>
                         <span class="icon is-small is-left">
                           <i class="fas fa-envelope"></i>
                         </span>
@@ -152,14 +121,14 @@
 
                     <div class="field">
                       <p class="control has-icons-left">
-                        <input id="password" class="input" type="password" placeholder="Password">
+                        <input id="password" class="input" type="password" placeholder="Password" required>
                         <span class="icon is-small is-left">
                           <i class="fas fa-lock"></i>
                         </span>
                       </p>
                     </div>
 
-                    <div class="field">
+                    <div class="field is-hidden">
                       <p class="control has-icons-left">
                         <input id="key" class="input" type="password" placeholder="Key">
                         <span class="icon is-small is-left">
@@ -172,7 +141,7 @@
                       <button class="button is-primary is-fullwidth">Sign Up</button>
                     </div>
 
-                    <p class="help is-danger is-hidden">Email or password is invalid.</p>
+                    <p id="error" class="help is-danger is-hidden">Email or password is invalid.</p>
 
                     <hr>
 
@@ -191,6 +160,22 @@
         </div>
       </div>
     </section>
+
+    <div id="success" class="modal">
+      <div class="modal-background">
+      </div>
+      <div class="modal-content">
+        <div class="box">
+            <div class="media-content">
+              <div class="level">
+                <p>Your account has successfully been created.</p>
+                <a class="button is-primary is-outlined" href="/login.html">Log In</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
 
     <a id="return">
       <span>
