@@ -29,7 +29,9 @@ For now, a current working version is available [here](http://veil.surge.sh).
 ![Games Page](screenshot2.png)
 
 ## What can I do right now?
-- You can view guild games, characters, members, and posts.
+- You can view posts, filter through posts with tags, and view each post in detail.
+- You can view a list of games, each game in detail, and which members play each game.
+- You can view a list of members and each member in detail, along with what games each member plays and what characters each member has for each game they play.
 - You can sign up for an account and log in.
 - If you are logged in, you can create a post and edit/delete your own post.
 
