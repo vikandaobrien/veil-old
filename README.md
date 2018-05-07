@@ -8,10 +8,8 @@ Website for Veil, a guild and gaming community
 - Difficult to communicate for bigger guilds
 - One place for everything
 
-
 #### What is this exactly?
 - A hub for gaming communities containing guild information, announcements, events, blog posts, etc.
-
 
 #### How did I build this?
 - I built this with HTML5, CSS3, and Sass using the [Bulma](http://bulma.io) framework, along with JavaScript, jQuery, AJAX, and Axios for the front-end. I deployed my front-end with Surge. I used Node.js, Express.js, Knex.js, and PostgreSQL for the back-end. I deployed my back-end with Heroku.
@@ -29,6 +27,16 @@ For now, a current working version is available [here](http://veil.surge.sh).
 ![Home Page](screenshot1.png)
 
 ![Games Page](screenshot2.png)
+
+## What can I do right now?
+- You can view guild games, characters, members, and posts.
+- You can sign up for an account and log in.
+- If you are logged in, you can create a post and edit/delete your own post.
+
+## Bugs
+- The site is not responsive (yet).
+- The 'Edit Profile' page is currently static.
+- Selecting tags when making a post does not add the tags to the post yet.
 
 ## Copyright
 
