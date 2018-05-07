@@ -24,14 +24,13 @@ function getQueryVariable (variable) {
   return false;
 }
 
-
 function renderMembers (members) {
 
   members.forEach(member => {
     const div = document.createElement('div');
     addClassesToElement(div, 'member', 'pointer');
     div.addEventListener('click', event => {
-      window.location = '/member.html?id=1';
+      goToMember(member);
     });
 
       const img = document.createElement('img');
@@ -46,6 +45,22 @@ function renderMembers (members) {
     memberContainer.appendChild(div);
   });
 }
+
+// EVENT HANDLERS
+
+function goToGame (game) {
+  window.location = `/game.html?id=${game.id}`;
+}
+
+function goToMember (member) {
+  window.location = `/member.html?id=${member.id}`;
+}
+
+function goToCharacter (character) {
+  window.location = `/`;
+}
+
+// AXIOS REQUEST
 
 function request(path, method = 'get', body = null) {
   let bearerToken = ''

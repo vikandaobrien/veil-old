@@ -4,12 +4,13 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Veil | Vikanda Gonzales</title>
+    <title>Veil</title>
     <link rel="stylesheet" href="css/main.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
     <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script defer src="lib/main.js"></script>
     <script defer src="lib/helper.js"></script>
+    <script defer src="lib/member.js"></script>
     <script defer src="lib/protected.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
   </head>
@@ -43,149 +44,22 @@
       </div>
     </nav>
 
-    <section id="member-info" class="hero is-light is-bold">
+    <section class="hero is-light is-bold">
       <div class="hero-body">
         <div class="container">
           <div class="columns">
             <div class="column is-8-desktop is-offset-2-desktop">
-              <div class="columns">
-                <div class="avatar" class="column is-4 has-text-centered">
-                  <img src="https://goo.gl/MFH4uB">
-                </div>
-                <div class="column is-8">
-                  <h1 class="title has-text-centered">
-                    Vikanda Gonzales
-                  </h1>
-                  <div class="info has-text-centered">
-                    <a>
-                      <span class="fa-icon">
-                        <i class="fas fa-star"></i>
-                      </span>
-                      Leader
-                    </a>
-                    <a>
-                      <span class="fa-icon">
-                        <i class="fas fa-birthday-cake"></i>
-                      </span>
-                      September 16
-                    </a>
-                    <a>
-                      <span class="fa-icon">
-                        <i class="fas fa-map-marker-alt"></i>
-                      </span>
-                      Seattle, WA
-                    </a>
-                    <a>
-                      <span class="fa-icon">
-                        <i class="fas fa-clock"></i>
-                      </span>
-                      UTC-8:00
-                    </a>
-                  </div>
-                  <p class="has-text-justified">
-                    Vikanda is the leader, founder, and mastermind of Veil. She is a workaholic and will be caught doing something productive 24/7. She has a fatal allergy for anything that requires jumping. She used to be too insecure about her abilities to participate in difficult battles, but ever since she attended the Kayden School of Healing, she has devoted herself to career raid healing. Don't let her humble demeanor fool you! She's actually quite blunt and will point out mistakes like no tomorrow if she knows you well enough.
-                  </p>
-                </div>
-              </div>
+              <div id="member-info" class="columns"></div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="member-games" class="hero is-dark is-bold">
+    <section class="hero is-dark is-bold">
       <div class="hero-body">
         <div class="container">
-          <div class="columns">
-
-            <div class="column is-4">
-              <div class="card">
-                <a href="/game.html?id=1">
-                  <div class="card-image game-card">
-                    <figure class="image is-2by1">
-                      <img src="https://goo.gl/T5sHmK">
-                    </figure>
-                    <div class="game-overlay">
-                      <div class="game-hover">
-                      </div>
-                    </div>
-                    <h1 class="title">
-                      Final Fantasy XIV
-                    </h1>
-                  </div>
-                </a>
-                <div class="card-content">
-                  <div class="members">
-                    <div id="vika" class="member pointer">
-                      <img src="./assets/members/vikanda-small.png">
-                    </div>
-                    <div class="member pointer">
-                      <img src="./assets/members/nalli-small.png">
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="column is-4">
-              <div class="card">
-                <a href="/game.html?id=2">
-                  <div class="card-image game-card">
-                    <figure class="image is-2by1">
-                      <img src="https://goo.gl/HJUka9" alt="Placeholder image">
-                    </figure>
-                    <div class="game-overlay">
-                      <div class="game-hover">
-                      </div>
-                    </div>
-                    <h1 class="title">
-                      Overwatch
-                    </h1>
-                  </div>
-                </a>
-                <div class="card-content">
-                  <div class="members">
-                    <div class="member pointer">
-                      <img src="./assets/members/lyon-small.png">
-                    </div>
-                    <div class="member pointer">
-                      <img src="./assets/members/shref-small.png">
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="column is-4">
-              <div class="card">
-                <a href="/game.html?id=3">
-                  <div class="card-image game-card">
-                    <figure class="image is-2by1">
-                      <img src="https://goo.gl/FW29k7" alt="Placeholder image">
-                    </figure>
-                    <div class="game-overlay">
-                      <div class="game-hover">
-                      </div>
-                    </div>
-                    <h1 class="title">
-                      Guild Wars 2
-                    </h1>
-                  </div>
-                </a>
-                <div class="card-content">
-                  <div class="members">
-                    <div class="member pointer">
-                      <img src="./assets/members/aizea-small.png">
-                    </div>
-                    <div class="member pointer">
-                      <img src="./assets/members/kirisi-small.png">
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-          </div>
+          <div id="member-games" class="columns"></div>
         </div>
       </div>
     </section>

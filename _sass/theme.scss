@@ -201,12 +201,9 @@
 }
 
 #member-games {
-
-  .columns {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-  }
 
   .member {
     height: 50px;

@@ -6696,15 +6696,14 @@ footer.footer {
     object-fit: cover;
     width: 100%; }
 
-#member-games .columns {
+#member-games {
   display: flex;
   flex-wrap: wrap;
   justify-content: center; }
-
-#member-games .member {
-  height: 50px;
-  margin: .25rem;
-  width: 50px; }
+  #member-games .member {
+    height: 50px;
+    margin: .25rem;
+    width: 50px; }
 
 #character-info img {
   border-radius: 6px;

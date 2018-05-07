@@ -22,6 +22,7 @@ function gameLeft (game) {
 
     const overlay = document.createElement('div');
     addClassesToElement(overlay, 'game-bg');
+    section.appendChild(overlay);
 
     const body = document.createElement('div');
     addClassesToElement(body, 'hero-body');
@@ -36,7 +37,6 @@ function gameLeft (game) {
 
       body.appendChild(container);
 
-    section.appendChild(overlay);
     section.appendChild(body);
 
   games.appendChild(section);
@@ -52,6 +52,7 @@ function gameRight (game) {
 
     const overlay = document.createElement('div');
     addClassesToElement(overlay, 'game-bg');
+    section.appendChild(overlay);
 
     const body = document.createElement('div');
     addClassesToElement(body, 'hero-body');
@@ -65,13 +66,8 @@ function gameRight (game) {
         container.appendChild(title);
 
       body.appendChild(container);
-
-    section.appendChild(overlay);
+  
     section.appendChild(body);
 
   games.appendChild(section);
-}
-
-function goToGame (game) {
-  window.location = `/game.html?id=${game.id}`;
 }
