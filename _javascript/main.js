@@ -86,7 +86,7 @@ function loggedIn (user) {
 
   const userId = user.id;
 
-  axios.get(`http://localhost:3000/users/${userId}`)
+  axios.get(`https://boiling-gorge-85613.herokuapp.com/users/${userId}`)
     .then(response => {
       const div = document.createElement('div');
       addClassesToElement(div, 'navbar-item', 'has-dropdown', 'is-hoverable');

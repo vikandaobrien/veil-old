@@ -11,7 +11,7 @@ function renderTags (tags) {
           filterPosts(tag);
         } else {
           window.location = '/';
-        }      
+        }
       })
 
         const name = document.createElement('span');
@@ -52,7 +52,7 @@ function tagColor (tag) {
   return bg;
 }
 
-axios.get('http://localhost:3000/tags')
+axios.get('https://boiling-gorge-85613.herokuapp.com/tags')
   .then(response => {
     const tags = response.data.data;
     renderTags(tags);

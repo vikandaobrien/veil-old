@@ -3,7 +3,7 @@ const gameImage = document.querySelector('.game-image');
 const gameTitle = document.querySelector('#game-info');
 const memberContainer = document.querySelector('.members');
 
-axios.get(`http://localhost:3000/games/${gameId}`)
+axios.get(`https://boiling-gorge-85613.herokuapp.com/games/${gameId}`)
   .then(response => {
     const game = response.data.data[0];
     document.title = `Veil | ${game.name}`;

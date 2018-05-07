@@ -92,7 +92,7 @@ function addPostModal () {
         selectTag.size = '3';
 
         // GET ALL request to grab tag names from database.
-        axios.get('http://localhost:3000/tags')
+        axios.get('https://boiling-gorge-85613.herokuapp.com/tags')
           .then(response => {
             const tags = response.data.data;
             tags.forEach(tag => {
@@ -144,7 +144,7 @@ function addPostModal () {
           p.classList.remove('is-hidden');
         } else {
           // CREATE request to add a post
-          axios.post('http://localhost:3000/posts', { title, image, content, user_id })
+          axios.post('https://boiling-gorge-85613.herokuapp.com/posts', { title, image, content, user_id })
           .then(response => {
             window.location = '/';
             closeModal();
@@ -238,7 +238,7 @@ function editPostModal (post) {
         selectTag.multiple = true;
         selectTag.size = '3';
         // GET ALL request to grab tag names from database.
-        axios.get('http://localhost:3000/tags')
+        axios.get('https://boiling-gorge-85613.herokuapp.com/tags')
           .then(response => {
             const tags = response.data.data;
             tags.forEach(tag => {
@@ -284,7 +284,7 @@ function editPostModal (post) {
         p.classList.remove('is-hidden');
       } else {
         // UPDATE request to edit post
-        axios.put(`http://localhost:3000/posts/${postId}`, { title, image, content })
+        axios.put(`https://boiling-gorge-85613.herokuapp.com/posts/${postId}`, { title, image, content })
         .then(response => {
           location.reload();
         });
@@ -317,7 +317,7 @@ function deletePostModal () {
   button.innerHTML = 'Delete';
   button.addEventListener('click', event => {
     // REMOVE request to delete post
-    axios.delete(`http://localhost:3000/posts/${postId}`)
+    axios.delete(`https://boiling-gorge-85613.herokuapp.com/posts/${postId}`)
     .then((response) => {
       window.location = '/';
     });

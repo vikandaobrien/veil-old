@@ -1,7 +1,7 @@
 const postId = getQueryVariable('id');
 const postContainer = document.querySelector('#post');
 
-axios.get(`http://localhost:3000/posts/${postId}`)
+axios.get(`https://boiling-gorge-85613.herokuapp.com/posts/${postId}`)
   .then(response => {
     const post = response.data.data[0];
     document.title = `Veil | ${post.title}`;

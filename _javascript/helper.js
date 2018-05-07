@@ -68,7 +68,7 @@ function request(path, method = 'get', body = null) {
     bearerToken = `Bearer ${token}`
   }
 
-  return axios(`http://localhost:3000${path}`, {
+  return axios(`https://boiling-gorge-85613.herokuapp.com${path}`, {
     method: method,
     headers: {
       'Content-Type': 'application/json',

@@ -1,6 +1,6 @@
 const games = document.querySelector('#games');
 
-axios.get('http://localhost:3000/games')
+axios.get('https://boiling-gorge-85613.herokuapp.com/games')
   .then(response => {
     const games = response.data.data
     games.forEach(game => {
@@ -66,7 +66,7 @@ function gameRight (game) {
         container.appendChild(title);
 
       body.appendChild(container);
-  
+
     section.appendChild(body);
 
   games.appendChild(section);
