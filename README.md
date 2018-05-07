@@ -1,7 +1,7 @@
 # veil
 Website for Veil, a guild and gaming community
 
-# Character Builder
+# Veil: GuildHub
 
 >Currently a work in progress!
 
