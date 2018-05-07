@@ -24,6 +24,18 @@ function getQueryVariable (variable) {
   return false;
 }
 
+// EVENT HANDLERS
+
+function goToGame (game) {
+  window.location = `/game.html?id=${game.id}`;
+}
+
+function goToMember (member) {
+  window.location = `/member.html?id=${member.id}`;
+}
+
+// MULTI-PURPOSE RENDERS
+
 function renderMembers (members) {
 
   members.forEach(member => {
@@ -44,20 +56,6 @@ function renderMembers (members) {
 
     memberContainer.appendChild(div);
   });
-}
-
-// EVENT HANDLERS
-
-function goToGame (game) {
-  window.location = `/game.html?id=${game.id}`;
-}
-
-function goToMember (member) {
-  window.location = `/member.html?id=${member.id}`;
-}
-
-function goToCharacter (character) {
-  window.location = `/`;
 }
 
 // AXIOS REQUEST
