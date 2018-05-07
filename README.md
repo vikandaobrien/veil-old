@@ -1,7 +1,5 @@
-# veil
-Website for Veil, a guild and gaming community
-
 # Veil: GuildHub
+Website for Veil, a guild and gaming community
 
 >Currently a work in progress!
 
