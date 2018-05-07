@@ -6482,6 +6482,9 @@ footer.footer {
 .pointer {
   cursor: pointer; }
 
+.add-padding {
+  padding: 3rem 0; }
+
 .section {
   background: white; }
 

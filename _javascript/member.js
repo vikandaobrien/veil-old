@@ -9,9 +9,16 @@ axios.get(`http://localhost:3000/users/${userId}`)
     renderMemberInfo(user);
 
     const games = user.games;
-    games.forEach(game => {
-      renderMemberGame(game);
-    })
+    if (games.length !== 0) {
+      games.forEach(game => {
+        renderMemberGame(game);
+      })
+    } else {
+      const h1 = document.createElement('h1');
+      addClassesToElement(h1, 'title', 'add-padding');
+      h1.innerHTML = `${user.fname} has not added any games.`;
+      memberGames.appendChild(h1);
+    }
   });
 
 function renderMemberInfo (user) {
@@ -70,6 +77,9 @@ function renderMemberGame (game) {
 
       const cardImg = document.createElement('div');
       addClassesToElement(cardImg, 'card-image', 'game-card', 'pointer');
+      cardImg.addEventListener('click', event => {
+        goToGame(game);
+      });
 
         const figure = document.createElement('figure');
         addClassesToElement(figure, 'image', 'is-2by1');
@@ -96,30 +106,33 @@ function renderMemberGame (game) {
 
       card.appendChild(cardImg);
 
-      const cardContent = document.createElement('div');
-      addClassesToElement(cardContent, 'card-content');
+      const gameChars = game.characters;
 
-        const characters = document.createElement('div');
-        addClassesToElement(characters, 'members');
+      if (gameChars.length !== 0) {
+        const cardContent = document.createElement('div');
+        addClassesToElement(cardContent, 'card-content');
 
-          const gameChars = game.characters;
-          gameChars.forEach(gameChar => {
-            const character = document.createElement('div');
-            addClassesToElement(character, 'member', 'pointer');
-            character.addEventListener('click', event => {
-              goToCharacter(gameChar);
-            })
+          const characters = document.createElement('div');
+          addClassesToElement(characters, 'members');
 
-              const charImg = document.createElement('img');
-              charImg.src = character.image;
-              character.appendChild(charImg);
+            gameChars.forEach(gameChar => {
+              const character = document.createElement('div');
+              addClassesToElement(character, 'member', 'pointer');
+              character.addEventListener('click', event => {
+                goToCharacter(gameChar);
+              });
 
-            characters.appendChild(character);
-          });
+                const charImg = document.createElement('img');
+                charImg.src = gameChar.image;
+                character.appendChild(charImg);
 
-        cardContent.appendChild(characters);
+              characters.appendChild(character);
+            });
 
-      card.appendChild(cardContent);
+          cardContent.appendChild(characters);
+
+        card.appendChild(cardContent);
+      }
 
     container.appendChild(card);
 
