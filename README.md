@@ -1,7 +1,7 @@
 # Veil: GuildHub
 Website for Veil, a guild and gaming community
 
->Currently a work in progress!
+>Currently a work in progress! Will be completely remade using React and Redux along with an Express.js backend and PostgreSQL database.
 
 #### Why did I decide to do this?
 - A lot of guild website builders are ugly, outdated, not responsive
